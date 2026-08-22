@@ -6,6 +6,21 @@ framework_version: 1.2.2
 
 <!-- SETUP: Skill match areas and career goals are personalized by running /setup -->
 
+## China-mainland screening override
+
+When a role is in China mainland, read `CLAUDE.md`'s South China Job Search Policy
+and `10-china-mainland-workflow.md` before this generic framework. The generic
+citizenship/work-permit gate below is not a substitute for Chinese recruitment
+eligibility. Instead, verify only what the JD actually states: province/city,
+recruitment type, employer type, degree, graduation year, experience, certificates,
+and major requirements. Keep unknowns as `unknown` and ask the candidate rather than
+assuming an answer.
+
+For Guangdong/Guangxi discovery, report an evidence-based `P0`, `P1`, `P2`, or
+`Skip` alongside any score. The priority is determined after hard filters, especially
+the Guangdong/Guangxi SOE rules. An explicit psychology-major requirement is a
+positive discovery trigger, not proof that every other requirement is met.
+
 ## Eligibility Gate — run before scoring
 
 If the candidate is not a citizen or permanent resident of the country they are applying in, run this first. It is a hard filter, not a scoring dimension, and it is separate from work-permit *timing*: timing asks "can they work the required hours yet?", eligibility asks "are they permitted to hold this job at all?". A candidate can pass timing and still be categorically excluded.
@@ -173,7 +188,7 @@ Present the evaluation as:
 
 ### Company Research Checklist
 - [ ] Checked company website (mission, values, recent news)
-- [ ] Checked review sites (Glassdoor, Jobindex, etc.)
+- [ ] Checked review sites (看准网、脉脉、Glassdoor 等)
 - [ ] Checked LinkedIn for team size, recent hires, connections
 - [ ] Checked media for restructuring, growth, or workplace issues
 - [ ] Identified network contacts who may know the team/manager

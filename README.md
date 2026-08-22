@@ -39,7 +39,7 @@ Sixty-nine tailored applications, twenty first interviews, and one signed contra
 
 ## What this is
 
-A structured workflow that turns Claude Code into a full-stack job application assistant. The core workflow (self-profiling, fit evaluation, and the drafter-reviewer application pipeline) is **language- and country-agnostic**. The job portal search skills are built for the Danish market (Jobindex, Jobnet, Akademikernes Jobbank, etc.), but the pattern is designed to be swapped for your local job boards.
+A structured workflow that turns an AI agent into a full-stack job application assistant. The core workflow (self-profiling, fit evaluation, and the drafter-reviewer application pipeline) is **language- and country-agnostic**. This fork's job discovery is adapted to China-mainland public sources (BOSS直聘、智联招聘、51job、猎聘、拉勾、脉脉、应届生、高校就业网、国聘、国企官网、企业官网、LinkedIn、公开招聘公告) with Guangdong and Guangxi as the target regions.
 
 ```
 /setup          /scrape              /apply <url>
@@ -80,10 +80,14 @@ cd ai-job-search
 
 ### 2. Install job search tools
 
+This fork searches Chinese-mainland public sources (BOSS直聘、智联招聘、51job、猎聘、拉勾、脉脉、应届生、高校就业网、国聘、国企官网、企业官网、LinkedIn、公开招聘公告) through the web-search based `china-public-job-search` skill — no CLI installation required.
+
+The optional CLI skills (`linkedin-search`, `freehire-search`) run with `bun` and have zero runtime dependencies:
+
 PowerShell:
 
 ```powershell
-$tools = @("jobbank-search", "jobdanmark-search", "jobindex-search", "jobnet-search", "linkedin-search", "freehire-search")
+$tools = @("linkedin-search", "freehire-search")
 foreach ($tool in $tools) {
   Push-Location ".agents/skills/$tool/cli"
   bun install
@@ -94,12 +98,12 @@ foreach ($tool in $tools) {
 Bash / zsh / Git Bash:
 
 ```bash
-for tool in jobbank-search jobdanmark-search jobindex-search jobnet-search linkedin-search freehire-search; do
+for tool in linkedin-search freehire-search; do
   (cd .agents/skills/$tool/cli && bun install)
 done
 ```
 
-For `linkedin-search` and `freehire-search` the install is optional: both have zero runtime dependencies and run with plain `bun`; `bun install` only pulls TypeScript dev types.
+`bun install` only pulls TypeScript dev types for these two; plain `bun` is enough to run them.
 
 ### 3. Set up your profile
 
@@ -122,7 +126,7 @@ This searches multiple job portals for positions matching your profile, deduplic
 ### 5. Apply to a job
 
 ```bash
-/apply https://jobindex.dk/job/1234567
+/apply https://careers.oppo.com/university/oppo/campus/post/1839
 ```
 
 If the URL can't be fetched (some job portals block automated access), you can paste the job description directly instead:
@@ -185,12 +189,11 @@ ai-job-search/
 │   │   └── upskill/                   # /upskill skill gap analysis and learning plan
 │   └── settings.json                  # Claude Code permissions (shared, scoped)
 ├── .agents/skills/                    # Job portal CLI tools
-│   ├── jobbank-search/                # Akademikernes Jobbank (Denmark)
-│   ├── jobdanmark-search/             # Jobdanmark.dk (Denmark)
-│   ├── jobindex-search/               # Jobindex.dk (Denmark)
-│   ├── jobnet-search/                 # Jobnet.dk (Denmark, government portal)
+│   ├── china-public-job-search/       # Guangdong/Guangxi public job discovery (web search)
 │   ├── linkedin-search/               # LinkedIn public job listings (country-agnostic)
 │   └── freehire-search/               # freehire.me tech job aggregator (multi-market, REST API)
+├── dashboard/                         # Local job-search console (search monitor, job pool, tasks)
+├── documents/cv/                      # Registered resumes (PDF/Word/TXT)
 ├── cv/
 │   └── main_example.tex               # moderncv LaTeX template
 ├── cover_letters/
@@ -289,17 +292,9 @@ If you prefer doing it by hand, the manual route still works: update the guidanc
 
 ### Job search tools
 
-The four Danish CLI tools in `.agents/skills/` (Jobbank, Jobdanmark, Jobindex, Jobnet) demonstrate the pattern for building a job-portal integration for a specific market. If you're in a different country, run:
+This fork searches China-mainland public sources through `china-public-job-search` (web-search based), covering BOSS直聘、智联招聘、51job、猎聘、拉勾、脉脉、应届生、高校就业网、国聘、国企官网、企业官方招聘页、LinkedIn/外企官网以及广东/广西公开招聘公告。登录、验证码或 App-only 的渠道不绕过；结果只作为发现线索，须以公开 JD 或官方公告核验。
 
-```
-/add-portal
-```
-
-Give it your local job board's URL. The command investigates the portal (search-URL pattern, result-page structure, robots.txt/access rules), scaffolds a CLI skill with the same structure, commands, and output contract as the shipped ones, and test-runs a live query before registering anything. Auth-walled portals are declined, and portals with restrictive terms get a prominent personal-use-only warning in the generated skill. The generated skill is market-specific and lives in your fork; the generator itself is the universal part.
-
-Maintaining a fork adapted to your market or language? Add it to the [Community forks & adaptations](https://github.com/MadsLorentzen/ai-job-search/discussions/78) thread so others can find it.
-
-For **country-agnostic** starting points outside Denmark, the repo ships two portal skills alongside the Danish demos:
+Two optional CLI skills remain available:
 
 - **`linkedin-search`** — built on LinkedIn's public, unauthenticated `jobs-guest` endpoints. Field-agnostic, **zero runtime dependencies** (runs with just `bun`), and takes the search location as an explicit flag, so it works for any market out of the box (`-l "Berlin, Germany"`, `-l "Mumbai, Maharashtra, India"`, `-l "Remote"`, …). Intended for **personal use only** — automated access is against LinkedIn's Terms of Service, so keep volume low. See `.agents/skills/linkedin-search/SKILL.md`.
 - **`freehire-search`** — queries the [freehire.me](https://freehire.me) aggregator's public REST API (JSON, no API key). Tech-focused (software, data, engineering, DevOps, remote), multi-market via facet flags (`--region`, `--country`, `--remote`), and **zero runtime dependencies**. Unlike the HTML-scraping Danish portals, results come back structured (skills, seniority, category). The backend is MIT-licensed and [self-hostable](https://github.com/strelov1/freehire) — point `FREEHIRE_API_URL` at your own instance if you prefer. See `.agents/skills/freehire-search/SKILL.md`.

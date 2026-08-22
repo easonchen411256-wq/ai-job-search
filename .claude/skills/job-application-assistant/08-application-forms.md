@@ -24,6 +24,19 @@ Trigger it whenever a posting or portal asks for any of:
 
 All accuracy rules from `05-cv-templates.md` and `03-writing-style.md` apply unchanged.
 
+## China-mainland sensitive-field handoff
+
+For Chinese recruiting portals, classify each form field before drafting or filling:
+
+| Field type | Action |
+|---|---|
+| A fact verbatim supported by the profile/CV | Draft or prefill for the candidate to review. |
+| National ID, hukou, political affiliation, ethnicity, marriage/family, health/disability, salary expectation, GPA/rank, certificate identifier, or unsupported exact date | `Needs user`; do not infer, transform, or guess. |
+| Login, SMS/WeChat/QR verification, CAPTCHA, 2FA, or final submission | Manual handoff. The candidate completes it and explicitly confirms before submission. |
+
+The agent can make a field-by-field checklist and draft free text. It must never
+claim qualifications, submit a form, or use a workaround for a verification step.
+
 ## Field type: self-introduction paragraph
 
 Usually 100–200 words, one paragraph, no formatting.

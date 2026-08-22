@@ -1,0 +1,73 @@
+{
+  "requested_at": "2026-08-15T04:17:46.158Z",
+  "updated_at": "2026-08-15T04:19:31.572Z",
+  "status": "completed",
+  "progress": 100,
+  "current_step": "本轮搜岗执行结束",
+  "current_source": "初始化",
+  "message": "已启动本地搜索。正在读取简历、检索条件和公开招聘渠道。",
+  "sources_checked": [],
+  "coverage": {
+    "sources_required": [
+      "BOSS直聘",
+      "智联招聘 / 51job",
+      "猎聘 / 拉勾 / 脉脉",
+      "应届生 / 高校就业网",
+      "高校人才网（高才网）",
+      "广西人才网 / 广西教育人社公告",
+      "国聘 / 国企官网",
+      "企业官方招聘页",
+      "LinkedIn / 外企官网",
+      "公开招聘公告"
+    ],
+    "sources_checked": [],
+    "query_groups_required": [
+      "管培：直接称呼",
+      "管培：秋招项目别名",
+      "管培：产品/科技培养项目",
+      "管培：企业官网/高校就业网",
+      "心理教师：高校人才网",
+      "心理教师：广西人才网/教育人社",
+      "心理教师：高校官网",
+      "心理教师：公开招聘公告",
+      "不限专业：央国企/集团秋招",
+      "不限专业：综合平台/就业网"
+    ],
+    "query_groups_checked": [],
+    "blocked": []
+  },
+  "jobs_found": 0,
+  "jobs_parsed": 0,
+  "resumes": [
+    "黄帅-AI产品经理.pdf",
+    "黄帅-产品经理.pdf",
+    "黄帅-用户研究.pdf",
+    "黄帅人力资源简历.pdf"
+  ],
+  "search_config": {
+    "scope": "广东、广西",
+    "keywords": "AI 产品、产品经理、用户研究、用户洞察、管培生、心理教师",
+    "role_families": [
+      "AI Product",
+      "Product",
+      "UXR / Insight",
+      "Management Trainee",
+      "Psychology Teaching"
+    ],
+    "sources": [
+      "BOSS直聘",
+      "智联招聘 / 51job",
+      "猎聘 / 拉勾 / 脉脉",
+      "应届生 / 高校就业网",
+      "高校人才网（高才网）",
+      "广西人才网 / 广西教育人社公告",
+      "国聘 / 国企官网",
+      "企业官方招聘页",
+      "LinkedIn / 外企官网",
+      "公开招聘公告"
+    ],
+    "psychology_trigger": true,
+    "notes": ""
+  },
+  "instruction": "Run the ai-job-search /scrape workflow. Discover, parse, and classify only; do not log in, fill forms, or submit applications."
+}

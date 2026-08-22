@@ -1,0 +1,23 @@
+model = "gpt-5.5"
+model_provider = "codex_local_access"
+model_reasoning_effort = "high"
+disable_response_storage = true
+service_tier = "default"
+sandbox_mode = "workspace-write"
+preferred_auth_method = "apikey"
+
+[features]
+js_repl = false
+memories = false
+
+[model_providers.codex_local_access]
+name = "Codex API Service"
+base_url = "http://localhost:64278/v1"
+wire_api = "responses"
+requires_openai_auth = false
+experimental_bearer_token = "agt_codex_LjyyRXJe34SPVWAXp8TTk01UATyD0P98"
+supports_websockets = false
+http_headers = { x-openai-actor-authorization = "cockpit-tools", x-agtools-disable-image-generation = "chat", x-cockpit-instance-id = ".codex" }
+
+[sandbox_workspace_write]
+network_access = true

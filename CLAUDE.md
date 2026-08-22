@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# 黄帅的求职工作台（广东 / 广西定向求职 Agent）
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. The AI assistant acts as a career advisor and application assistant for 黄帅, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -12,86 +9,177 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 5. **Career strategy** - Advise on positioning and personal branding
 
 ## Candidate Profile
+<!-- Populated from the registered CVs under documents/cv/ (2026-08-13). -->
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
+## South China Job Search Policy
+
+This workspace is configured for a Chinese-mainland job search. This policy is a
+search and triage rule, not evidence about the candidate. Do not invent degree,
+graduation year, work history, city preference, or eligibility details; collect
+those from the candidate profile and registered CVs before treating them as facts.
+
+### Geography
+- **In scope:** Guangdong and Guangxi only. Jobs whose confirmed work location is
+  elsewhere are `Skip`; remote/hybrid roles require an explicit Guangdong or Guangxi
+  work-location statement before entering the main pool.
+- **City preference:** keep the P0/P1/P2 city lists below empty until the candidate
+  sets them. Never silently assume Guangzhou, Shenzhen, Nanning, or any other city.
+
+| Province | P0 cities | P1 cities | P2 cities |
+|---|---|---|---|
+| Guangdong | [configure] | [configure] | [configure] |
+| Guangxi | [configure] | [configure] | [configure] |
+
+### Role families
+1. **AI Product (P0):** AI product manager, AI application product manager,
+   Agent product manager, LLM product manager, intelligent-product roles, and AI
+   product trainee roles.
+2. **Product (P0/P1):** product manager, product planning, strategy/platform/
+   commercial product, product trainee, and product-management trainee roles.
+3. **UXR / Insight (P0):** user research, UX research, user/consumer/customer
+   insight, market research, experience research/strategy, product research, and
+   user strategy (Chinese and English titles).
+4. **Management Trainee (P0/P1):** management trainee, graduate programme,
+   product/technology/digital/function trainee, especially product, research,
+   digital, or strategy streams.
+5. **Psychology Open Search:** any role whose JD explicitly accepts or prefers a
+   psychology-related major. It is a trigger, not a role-family label.
+6. **Psychology Teaching (P0, 最高优先):** any psychology-teacher-related role —
+   psychology teacher, mental-health-education teacher, psychology full-time
+   teacher, psychology course teacher, psychology lecturer, school psychology
+   support teacher, etc. (心理教师、心理健康教育教师、心理学教师、心理专任教师、
+   心理学专任教师、心理辅导教师、心理健康教育中心教师、心理健康课教师、心理学讲师、
+   心理学科教师、心理健康教育岗位等) at universities, vocational colleges,
+   technical schools, primary/secondary schools, or education institutions.
+   Campus and social recruitment, public and private employers all count; every
+   psychology-teacher-related posting enters the pool even as a P2 lead when the
+   full JD is not public.
+
+### Psychology-major trigger
+Treat the following as a positive discovery trigger when they occur in the JD's
+major/discipline requirement: `心理学`, `应用心理学`, `心理学类`, `心理相关专业`,
+`基础心理学`, `发展与教育心理学`, and combinations such as psychology with
+social science, statistics, HCI, marketing, management, or cognitive science.
+"心理学优先" and "相关专业优先" also count. A matching JD enters the candidate
+pool even if its title is outside the four role families. Do not treat a title-only
+keyword hit as proof; record the exact requirement text and whether psychology is
+required, accepted, or preferred.
+
+### Employer and recruitment policy
+- Search domestic firms, foreign firms, joint ventures, central/state-owned firms,
+  local SOEs, public institutions, and other employers in both provinces.
+- **Guangxi central/state-owned roles:** keep only campus recruitment or graduate
+  programme roles. Mark confirmed social recruitment as `Skip`.
+- **心理教师相关岗位（最高优先例外）:** 广东、广西高校/职校/技校/中小学等心理
+  教师、心理健康教育教师、心理专任教师、心理学讲师等相关岗位，校招、社招均纳入
+  搜索，不受“广西央国企仅校招/管培”和“广东央国企/事业单位默认跳过”限制。优先
+  用人社局、教育局、学校官网与高校人才网公告核验。
+- **Guangdong central/state-owned roles:** `Skip` by default, **except** verified
+  campus/management-trainee postings whose JD is major-unrestricted (不限专业/专业不限)
+  or explicitly accepts psychology majors; those enter the pool and must quote the JD wording.
+- Never guess recruitment type. Use `campus`, `social`, `graduate_program`,
+  `internship`, or `unknown`; unknown stays reviewable rather than being fabricated.
+
+### Safety boundary
+The agent may discover, parse, classify, prepare documents, and create tasks. It
+must not log in, bypass CAPTCHA/SMS/WeChat/2FA, fill sensitive fields, or submit an
+application without the candidate's explicit final confirmation. Chinese sensitive
+fields (ID number, household registration, political affiliation, ethnicity, marital
+or health information, exact salary, grades/rank, certificates, and exact education/
+employment dates) are `Needs user` unless already documented by the candidate.
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** 黄帅
+- **培养单位:** 中国科学院心理研究所（心理测评与心理干预方向）
+- **Email:** 1324305881@qq.com
+- **Phone:** 17891143665
+- **求职目标地点:** 广东、广西（P0/P1/P2 城市列表保持待配置，不自行假定）
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
+  | 中文 | 母语 |
+  | English | CET-6（可用于读写；口语水平以实际面试为准） |
   <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
   working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
   undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
   lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
   04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+- **CV language:** 中文（简历为中文版；英文版待补充）
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** 2027 届应用心理学硕士在读（预计 2027.6 毕业），主攻校招与实习
+- **LinkedIn headline:** 待补充（简历未提供）
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **应用心理学 硕士**（2024.8 - 2027.6）- 中国科学院大学（双一流；中国科学院心理研究所培养）
+  - GPA: 3.93/4；方向：心理测评与心理干预
+  - Topics: 心理测评与干预、问卷/实验设计、量表/心率/步态等多模态数据分析、VR 与认知训练评估
+- **应用心理学 本科**（2020.9 - 2024.6）- 中南民族大学
+  - 系统学习认知心理学、实验心理学、心理统计、心理测量与研究方法；掌握 SPSS 数据分析
 
-### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+### Research & Project Experience
+- **长者如厕跌倒风险情绪-认知多维监测与综合干预项目（国家重点研发计划）** - 课题组主要执行人（2024.11 - 至今）
+  - 梳理长者训练与生理数据采集需求并对接开发；负责设备连接、数据上传等流程测试与复测
+  - 参与 VR/认知任务测试，收集佩戴、操作、疲劳等体验反馈并推动适老化改进
+  - 使用 SPSS、R、Python 整理心率、步态、量表与行为数据
+- **儿童创新能力评价数字化平台建设与应用示范项目（国家重点研发计划）** - 系统需求与测试负责人（2025.5 - 至今）
+  - 梳理学生/家长/教师/科研人员使用场景，负责多端功能测试与用户反馈归纳
+- **特殊环境人员心理与能力测评系统建设项目** - 测评方案与实验设计执行人（2025.2 - 2025.9）
+  - 设计认知/情绪测评指标、问卷与行为任务，编制施测规范并完成预实验
+- **Moodiary 情绪调节智能体（“动感地带”AI+高校创智计划）** - 小组心理学负责人（2025）
+  - 调研情绪记录 App 用户痛点；参与 AI 功能与对话流程设计；制定 AI 回复规则与心理安全边界；项目获赛区二等奖
+- **中国科学院大学 2026 年度社会调查项目（主持人）**（2026.5 - 至今）
+  - 主持申报并获批《基于大规模流调的农村老年人心理健康现状、影响因素调查》，为心理所唯一入选项目
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **用户研究与产品测试:** 问卷设计、用户访谈、行为观察、可用性测试、任务分析、适老化体验评估
+- **AI 产品与交互:** AI 功能梳理、对话流程设计、AI 回复规则与评测、多端产品测试与验收
+- **数据分析:** SPSS、R、Python（数据清洗、描述统计、基础统计建模）
+- **资格证书:** CET-6、高中心理健康教师资格证、普通话二级甲等
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- CET-6
+- 高中心理健康教师资格证
+- 普通话二级甲等
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+<!-- 简历未列出同行评议论文；如后续补充再登记 -->
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- 鄢兰奖学金、泛海奖学金、多次院级三等奖学金
+- 2025 届“厚粲杯”全国大学生心理与认知智能测评挑战赛二等奖
+- “动感地带”AI+高校创智计划赛区二等奖、“挑战杯”创业计划比赛校级三等奖
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+<!-- 简历未包含 DISC/MBTI 等测评结果；以下仅从简历经历归纳 -->
+- **Strengths:** 跨专业协作、需求梳理、用户反馈归纳、细致测试与复测、数据分析
+- **Growth areas:** 待补充
+- **Thrives in:** 待补充
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- AI 产品 / Agent 产品：把心理学方法用于用户洞察与产品体验
+- 用户研究 / 用户洞察：问卷、访谈、行为与多模态数据结合
+- 心理健康与智能产品：心理测评、干预设计、隐私与心理安全边界
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- AI / 互联网 / 智能硬件: AI 产品经理、产品经理、用户研究/用户洞察
+- 心理健康 / 医疗健康: 测评、干预、用户体验研究
+- 央国企（仅广西校招/管培）: 国聘与企业招聘官网；广东央国企默认跳过
+- 外企 / 合资: LinkedIn Jobs 与企业中国区/全球招聘官网
 
 ### Deal-breakers
-<!-- Hard constraints on job search. Language requirements are handled separately and
-automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- 广西央国企只看校招/管培；社招不投（按配置文件政策）
+- 广东央国企默认跳过
+- 工作地点须在广东或广西；远程岗位需明确注明广东/广西工作地
+- 明确要求候选人不具备的硬性资格（如临床医学/精神医学执业资格）时跳过
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
 - `cover_letters/` - LaTeX cover letters (custom cover.cls template)
 - `.claude/skills/` - AI skill definitions for the application workflow
-- `.agents/skills/` - Job search CLI tools
+- `.agents/skills/` - Job search skills（china-public-job-search、linkedin-search、freehire-search）
+- `documents/cv/` - 已登记的简历（黄帅-AI产品经理、黄帅-产品经理、黄帅-用户研究、黄帅人力资源简历）
+- `dashboard/` - 本地求职工作台（搜岗状态栏、岗位池、招聘待办）
+- `job_scraper/` - 搜索任务状态、岗位池与运行日志
 
 ## Workflow for New Job Applications
 1. User provides a job posting (URL or text)
@@ -100,7 +188,7 @@ automatically from your Languages table above - don't duplicate them here. -->
 4. **Verify both documents** (see Verification Checklist below)
 5. Prepare interview talking points based on the role requirements and your strengths
 
-**Important:** When mentioning agentic coding or AI tooling in CVs/cover letters, explicitly reference **Claude Code** by name.
+**Important:** 在简历/求职信中如实描述 AI 工具使用（例如 Codex、ChatGPT、DeepSeek），不得虚构或夸大使用经历。
 
 ## Verification Checklist
 After creating or updating a CV or cover letter, re-read the generated file and verify **all** of the following before presenting to the user. Report the results as a pass/fail checklist.
