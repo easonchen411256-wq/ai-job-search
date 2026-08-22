@@ -2,17 +2,19 @@
   <img src="assets/mascot/pip_flight_loop.gif" alt="Pip, the courier bird" width="200">
 </p>
 
-# AI Job Search
+# AI Job Search（中文求职工作台）
 
 *The job search that runs on your machine.*
 
 <p align="center">
-  <a href="https://trendshift.io/repositories/43622?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-43622" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/43622/daily" alt="MadsLorentzen%2Fai-job-search | Trendshift" width="250" height="55"/></a>
+  <a href="https://github.com/easonchen411256-wq/ai-job-search" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/easonchen411256-wq/ai-job-search?style=flat" alt="GitHub stars"/></a>
 </p>
 
-[![CI](https://github.com/MadsLorentzen/ai-job-search/actions/workflows/ci.yml/badge.svg)](https://github.com/MadsLorentzen/ai-job-search/actions/workflows/ci.yml)
+[![CI](https://github.com/easonchen411256-wq/ai-job-search/actions/workflows/ci.yml/badge.svg)](https://github.com/easonchen411256-wq/ai-job-search/actions/workflows/ci.yml)
 
-An AI-powered job application framework built on [Claude Code](https://claude.com/claude-code). Fork it, fill in your profile, and let Claude evaluate job postings, tailor your CV, write cover letters, and prepare you for interviews.
+这是一个面向中国大陆求职场景的本地 AI 求职工作台，整合简历管理、公开岗位发现、岗位筛选、申请材料生成和申请跟踪。当前重点覆盖广东、广西，并支持心理教师、管培生、心理学相关岗位及“不限专业”央国企/校园招聘岗位。
+
+项目地址：[easonchen411256-wq/ai-job-search](https://github.com/easonchen411256-wq/ai-job-search)。
 
 > Note: This is an independent open-source project and is not affiliated with, endorsed by, sponsored by, or maintained by Anthropic. Anthropic and Claude Code are referenced only to describe the toolchain this workflow uses.
 >
@@ -71,10 +73,10 @@ The framework encodes career guidance best practices, including structured evalu
 
 > 🎥 **Prefer to see it in action first?** [The Next New Thing did a hands-on walkthrough](https://www.youtube.com/watch?v=HoVxjMNFYv4) of how the workflow is actually used, from setup to a finished application (recorded August 2026 - commands may have evolved since).
 
-### 1. Fork and clone
+### 1. Clone
 
 ```bash
-gh repo fork MadsLorentzen/ai-job-search --clone
+git clone https://github.com/easonchen411256-wq/ai-job-search.git
 cd ai-job-search
 ```
 
@@ -115,7 +117,17 @@ claude
 
 `/setup` offers three paths: read your `documents/` folder if you have one populated (CV PDF, LinkedIn export, diplomas, reference letters, past applications), import a single CV pasted in chat, or walk through an interview. It auto-detects what you have and asks. Documents-folder mode is idempotent and safe to re-run as you add more material; see `documents/README.md` for the layout.
 
-### 4. Search for jobs
+### 4. Open the local job-search workbench
+
+Windows 下双击仓库根目录的 `启动求职工作台.bat`，或运行：
+
+```powershell
+node dashboard/server.js
+```
+
+然后打开 <http://127.0.0.1:4173>。工作台负责保存简历、展示岗位池、执行筛选和记录人工决定；实际搜岗由 Agent 执行 `/scrape`。
+
+### 5. Search for jobs
 
 ```bash
 /scrape
@@ -123,7 +135,7 @@ claude
 
 This searches multiple job portals for positions matching your profile, deduplicates results, and presents them sorted by fit. Pick a match to run `/apply` on it directly — or, when a scrape returns more jobs than you want to eyeball, run `/rank` to batch-score them all against the fit framework and get a ranked shortlist first.
 
-### 5. Apply to a job
+### 6. Apply to a job
 
 ```bash
 /apply https://careers.oppo.com/university/oppo/campus/post/1839
@@ -192,7 +204,10 @@ ai-job-search/
 │   ├── china-public-job-search/       # Guangdong/Guangxi public job discovery (web search)
 │   ├── linkedin-search/               # LinkedIn public job listings (country-agnostic)
 │   └── freehire-search/               # freehire.me tech job aggregator (multi-market, REST API)
-├── dashboard/                         # Local job-search console (search monitor, job pool, tasks)
+├── dashboard/                         # 本地求职工作台（搜岗状态、岗位池、筛选、任务）
+│   ├── server.js                       # 本地 API 与搜岗执行器入口
+│   ├── index.html                      # 工作台页面
+│   └── README.md                       # 工作台使用说明
 ├── documents/cv/                      # Registered resumes (PDF/Word/TXT)
 ├── cv/
 │   └── main_example.tex               # moderncv LaTeX template
@@ -217,7 +232,6 @@ ai-job-search/
 │   ├── security_guards.py             # CI guards: permission allowlist, gitignore rules, manifests
 │   └── README_SALARY_TOOL.md          # Salary tool setup instructions
 ├── job_scraper/                       # Scraper state (seen jobs, results)
-├── gmail_sync/                        # /gmail-sync state (processed message IDs, last sync date)
 ├── upskill/                           # /upskill report output (markdown reports per run)
 ├── job_search_tracker.csv             # Application tracking spreadsheet
 └── SETUP.md                           # Detailed setup guide
