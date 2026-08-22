@@ -18,30 +18,11 @@
 
 > Note: This is an independent open-source project and is not affiliated with, endorsed by, sponsored by, or maintained by Anthropic. Anthropic and Claude Code are referenced only to describe the toolchain this workflow uses.
 >
-> This project has **no affiliated cryptocurrency, token, or paid sponsorship program**. Anything claiming otherwise is unauthorized and should be treated as a scam. The only ways to support the project are the Ko-fi link below and contributing on GitHub.
-
-## Does it actually work?
-
-I'm a geophysicist by training. When my position was cut in late 2025, I built this framework to run my own job search - the same `/scrape`, `/apply`, and `/interview` workflow in this repo, used weekly, on my own career. I was upfront about it with every employer I spoke to, and instead of counting against me, it usually sparked a genuine technical conversation.
-
-Sixty-nine tailored applications, twenty first interviews, and one signed contract later, I started as an AI engineer in June 2026. People kept asking whether this actually works. It got me hired. Now it's yours.
-
-*The longer version, including the full application funnel, is on [LinkedIn](https://www.linkedin.com/in/mads-lorentzen/).*
-
-<p align="center">
-  <i>Did this save you a Sunday of cover-letter writing? Consider a coffee.<br>
-  Did it land you the job? Maybe two.</i> ☕
-</p>
-
-<p align="center">
-  <a href="https://ko-fi.com/madslorentzen">
-    <img src="https://storage.ko-fi.com/cdn/kofi3.png?v=6" alt="Buy me a coffee at ko-fi.com" height="40">
-  </a>
-</p>
+本项目是个人求职工具，岗位数据、简历、申请记录和搜索任务均以本机文件为准；不会代替用户登录招聘网站或自动投递。
 
 ## What this is
 
-A structured workflow that turns an AI agent into a full-stack job application assistant. The core workflow (self-profiling, fit evaluation, and the drafter-reviewer application pipeline) is **language- and country-agnostic**. This fork's job discovery is adapted to China-mainland public sources (BOSS直聘、智联招聘、51job、猎聘、拉勾、脉脉、应届生、高校就业网、国聘、国企官网、企业官网、LinkedIn、公开招聘公告) with Guangdong and Guangxi as the target regions.
+A structured workflow that turns an AI agent into a full-stack job application assistant. The core workflow (self-profiling, fit evaluation, and the drafter-reviewer application pipeline) is **language- and country-agnostic**. This personal workspace adapts job discovery to China-mainland public sources, with Guangdong and Guangxi as the target regions.
 
 ```
 /setup          /scrape              /apply <url>
@@ -63,15 +44,13 @@ The framework encodes career guidance best practices, including structured evalu
 
 ## Prerequisites
 
-- [Claude Code](https://claude.com/claude-code) (CLI). Using a different agent tool (Codex, Antigravity, Gemini CLI)? Start at [`AGENTS.md`](AGENTS.md) - the portal search skills work there out of the box, and [community forks](https://github.com/MadsLorentzen/ai-job-search/discussions/78) adapt the full workflow.
+- [Claude Code](https://claude.com/claude-code) 或兼容的 Agent CLI。不同 Agent 的使用约定见 [`AGENTS.md`](AGENTS.md)。
 - Python 3.10+
 - [Bun](https://bun.sh) (for job search CLI tools)
 - LaTeX distribution with `lualatex` and `xelatex`: [TeX Live](https://tug.org/texlive/), [MacTeX](https://tug.org/mactex/), [TinyTeX](https://yihui.org/tinytex/), or [MiKTeX](https://miktex.org/). The CV compiles with `lualatex` (pdflatex often fails on modern MiKTeX installs with `fontawesome5` font-expansion errors); the cover letter compiles with `xelatex` because `cover.cls` requires `fontspec`. If using a minimal TeX install such as TinyTeX or BasicTeX, install the extra packages listed in [SETUP.md](SETUP.md#minimal-tex-install-tinytexbasictex).
 - Optional: `pdftotext` from [poppler](https://poppler.freedesktop.org/) (macOS: `brew install poppler`, Debian/Ubuntu: `apt install poppler-utils`, Windows: `choco install poppler`) — used by `/apply`'s ATS parseability check on the compiled CV. If missing, the check degrades gracefully to a visual keyword review.
 
 ## Quick start
-
-> 🎥 **Prefer to see it in action first?** [The Next New Thing did a hands-on walkthrough](https://www.youtube.com/watch?v=HoVxjMNFYv4) of how the workflow is actually used, from setup to a finished application (recorded August 2026 - commands may have evolved since).
 
 ### 1. Clone
 
@@ -82,7 +61,7 @@ cd ai-job-search
 
 ### 2. Install job search tools
 
-This fork searches Chinese-mainland public sources (BOSS直聘、智联招聘、51job、猎聘、拉勾、脉脉、应届生、高校就业网、国聘、国企官网、企业官网、LinkedIn、公开招聘公告) through the web-search based `china-public-job-search` skill — no CLI installation required.
+本项目通过基于网页搜索的 `china-public-job-search` 技能检索中国大陆公开岗位，无需额外安装 CLI。
 
 The optional CLI skills (`linkedin-search`, `freehire-search`) run with `bun` and have zero runtime dependencies:
 
@@ -306,22 +285,22 @@ If you prefer doing it by hand, the manual route still works: update the guidanc
 
 ### Job search tools
 
-This fork searches China-mainland public sources through `china-public-job-search` (web-search based), covering BOSS直聘、智联招聘、51job、猎聘、拉勾、脉脉、应届生、高校就业网、国聘、国企官网、企业官方招聘页、LinkedIn/外企官网以及广东/广西公开招聘公告。登录、验证码或 App-only 的渠道不绕过；结果只作为发现线索，须以公开 JD 或官方公告核验。
+本项目通过 `china-public-job-search` 检索中国大陆公开来源，覆盖招聘平台、企业官网、高校人才网、广西人才网、国聘及广东/广西教育人社公告。登录、验证码或 App-only 的渠道不绕过；结果只作为发现线索，须以公开 JD 或官方公告核验。
 
 Two optional CLI skills remain available:
 
 - **`linkedin-search`** — built on LinkedIn's public, unauthenticated `jobs-guest` endpoints. Field-agnostic, **zero runtime dependencies** (runs with just `bun`), and takes the search location as an explicit flag, so it works for any market out of the box (`-l "Berlin, Germany"`, `-l "Mumbai, Maharashtra, India"`, `-l "Remote"`, …). Intended for **personal use only** — automated access is against LinkedIn's Terms of Service, so keep volume low. See `.agents/skills/linkedin-search/SKILL.md`.
 - **`freehire-search`** — queries the [freehire.me](https://freehire.me) aggregator's public REST API (JSON, no API key). Tech-focused (software, data, engineering, DevOps, remote), multi-market via facet flags (`--region`, `--country`, `--remote`), and **zero runtime dependencies**. Unlike the HTML-scraping Danish portals, results come back structured (skills, seniority, category). The backend is MIT-licensed and [self-hostable](https://github.com/strelov1/freehire) — point `FREEHIRE_API_URL` at your own instance if you prefer. See `.agents/skills/freehire-search/SKILL.md`.
 
-### Extending the framework: portals, templates, criteria - and borrowing from other forks
+### Extending this personal workspace
 
-Everything above adds up to an extension model, so here it is stated plainly. The framework has three extension points, and none of them require touching upstream:
+这个工作台有三个可扩展位置：
 
-1. **Portal skills** - the module system for job boards. Every `*-search` skill is a self-contained folder under `.agents/skills/` with the same contract (a `search`/`detail` CLI, `--format json|table|plain` output, an `enabled:` flag in its `SKILL.md`, its own tests). `/scrape` auto-discovers any installed skill that follows the contract - nothing to register, nothing to wire up. `/add-portal` generates new ones; the [community portal index](https://github.com/MadsLorentzen/ai-job-search/discussions/78) catalogs the ones other forks have built.
+1. **岗位渠道技能**：每个 `*-search` 技能位于 `.agents/skills/`，由 `/scrape` 按统一接口发现；`/add-portal` 可生成新渠道。
 2. **Document templates** - `/add-template` registers any CV or cover-letter toolchain that compiles to PDF from the command line, LaTeX or otherwise.
 3. **Evaluation criteria** - deal-breakers and preferences in your profile are free-form, and the evaluation rubric scores against whatever you put there. "Strong parental-leave terms", "minimum salary X per my union's scale", "no on-call" - each is one profile line, no code, and it carries real weight in `/rank` and `/apply` fit evaluations. Language is the one deal-breaker type with dedicated, structured handling: `/setup` captures every language you work in and your level (asked directly, or inferred from your CV/LinkedIn export) into a `Languages` table, and the Language Gate (`04-job-evaluation.md`) hard-rejects a posting that requires a language you haven't declared at all, while flagging - not auto-rejecting - one that asks for a higher level than you declared in a language you do work in, so a borderline case (a strict "fluent" bar against your own B1/B2, say) gets your judgment instead of a silent drop.
 
-**Borrowing a portal skill from another fork** is the intended way to get a board that upstream doesn't ship: find it in the [portal index](https://github.com/MadsLorentzen/ai-job-search/discussions/78), open that fork, and copy the one folder into your own `.agents/skills/`. Before you run it:
+新增岗位渠道前，请先阅读并测试该技能的全部代码：
 
 - **Read the code.** All of it - these CLIs run pre-approved on your machine (`.claude/settings.json` allowlists them) against your career data. Check that the only network calls go to the job board it claims to search, that `package.json` has no `dependencies` and no lifecycle scripts (`postinstall` etc.), and that nothing reads or writes outside its own folder.
 - **Run its tests offline** (`bun test` in the skill's `cli/` directory) - a well-built skill's tests pass with no network access.
@@ -329,7 +308,7 @@ Everything above adds up to an extension model, so here it is stated plainly. Th
 
 The copy step is manual on purpose. Your settings already allow installed portal skills to run without asking each time - so an installer that fetched them from third-party repos for you would skip the one check that matters: you, reading the code first. There isn't one, and that's a security decision rather than a missing feature.
 
-Market-specific *data sources* (a national salary database, local award-rate tables) follow the same pattern as portals: they belong in a market fork, shared via [#78](https://github.com/MadsLorentzen/ai-job-search/discussions/78), not upstream.
+市场数据源（例如薪资表）同样放在本项目自己的 `tools/` 或数据目录中，并通过 `.gitignore` 保护个人数据。
 
 ### Salary benchmarking
 
@@ -349,7 +328,7 @@ To wipe your profile data and start fresh:
 
 ### Staying up to date
 
-Upstream moves fast. Rather than pulling raw `master` and hoping, update your fork to a tagged [release](../../releases) - a vetted checkpoint described in [CHANGELOG.md](CHANGELOG.md). `python3 tools/check_upstream_updates.py` previews exactly which of your personalized files an update touches before you merge. Full walkthrough in [SETUP.md, section 8](SETUP.md#8-pulling-upstream-updates-into-your-fork).
+项目更新以本仓库 `master` 分支和 [CHANGELOG.md](CHANGELOG.md) 为准。修改前先提交本地变更，更新后运行测试并确认工作台可以启动。
 
 ## Tips for better results
 
@@ -372,12 +351,11 @@ To get the most from this, invest time during `/setup` in describing not just yo
 
 ## Contributing
 
-Thinking about a PR? Read [CONTRIBUTING.md](CONTRIBUTING.md) first - it explains what gets merged, what lives in forks, and why.
+如需继续修改，请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)，并保持个人数据不进入公开提交。
 
 ## Acknowledgements
 
-- [Mikkel Krogholm](https://github.com/mikkelkrogsholm) ([skills repo](https://github.com/mikkelkrogsholm/skills)) for the job search CLI skills
-- Built with [Claude Code](https://claude.com/claude-code) by [Anthropic](https://anthropic.com)
+- 使用 Claude Code/Codex 等 Agent 工具完成岗位检索与材料整理。
 
 ## License
 

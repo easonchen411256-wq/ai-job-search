@@ -26,7 +26,7 @@ On Windows, `py --version` is often the most reliable check. If your system expo
 
 ### Bun (for job search tools)
 
-The optional job search CLIs (`linkedin-search` and `freehire-search`) are written in TypeScript and run with Bun. This fork's main China discovery uses the web-search based `china-public-job-search` skill and needs no CLI.
+The optional job search CLIs (`linkedin-search` and `freehire-search`) are written in TypeScript and run with Bun. This workspace's main China discovery uses the web-search based `china-public-job-search` skill and needs no CLI.
 
 - macOS/Linux:
 
@@ -151,14 +151,14 @@ Push-Location $SmokeDir; xelatex -interaction=nonstopmode -halt-on-error cover_s
 
 If `pdftotext` is missing, `/apply` skips the mechanical check with a warning and falls back to a visual keyword review — everything else works normally.
 
-## 2. Fork and clone
+## 2. Clone this personal repository
 
 ```bash
-gh repo fork MadsLorentzen/ai-job-search --clone
+git clone https://github.com/easonchen411256-wq/ai-job-search.git
 cd ai-job-search
 ```
 
-Or manually: fork on GitHub, then clone your fork.
+如果仓库已经下载，直接进入该目录即可。
 
 ## 3. Install job search CLI dependencies
 Run these from the repository root.
@@ -282,21 +282,18 @@ Set-Location cover_letters; xelatex cover_<company>_<role>.tex; Set-Location ..
 
 These commands apply to the stock templates (moderncv CV, `cover.cls` cover letter). If you'd rather use your own LaTeX template, run `/add-template` — it captures the template's compile engine, fonts, style rules, and page limit, test-compiles it, and wires it into `/apply`. See the "LaTeX templates" section in the README.
 
-## 8. Pulling upstream updates into your fork
+## 8. 更新这个个人仓库
 
-Upstream keeps improving the methodology files your fork has personalized, so plan for updates from day one:
+本仓库以 `origin/master` 为唯一发布来源。修改前先保存当前状态，确认个人资料没有被加入版本控制：
 
-**Prefer releases over raw `master`.** Tagged [releases](../../releases) are vetted checkpoints, each described in [CHANGELOG.md](CHANGELOG.md). Updating to a tag pulls a stable, documented state instead of whatever `master` happens to be mid-review. Fetch tags with `git fetch upstream --tags` and merge a release (for example `git merge v1.0.0`) when you want stability; pull `master` directly only when you specifically want the latest unreleased changes. The steps below apply either way - substitute the release tag for `upstream/master` where you see it.
+```bash
+git status
+git add <需要提交的文件>
+git commit -m "说明本次修改"
+git push origin master
+```
 
-1. **Commit your personalization - but know where those commits land.** `/setup` edits CLAUDE.md and the profile skill files in place; those edits are *yours*, and committing them is what lets updates merge cleanly. But a GitHub **fork of this repo is public** - forks of public repositories cannot be made private - so anything you commit *and push to a fork* is visible to anyone. If you want your profile in a remote at all, don't push it to a fork: create a **private** repository, push there, and add this repo as the `upstream` remote (`git remote add upstream https://github.com/MadsLorentzen/ai-job-search.git`) to keep receiving updates. Committing locally without pushing is also fine. The genuinely sensitive files (tracker, salary data, `documents/`, application archives) are gitignored and never enter git either way. An uncommitted working tree is the most common reason `git pull` refuses to merge at all (`Your local changes ... would be overwritten`).
-2. **Preview what changed before pulling:**
-   ```bash
-   git remote add upstream https://github.com/MadsLorentzen/ai-job-search.git   # first time only, if you cloned your own fork
-   git fetch upstream    # or origin, if you cloned the template directly
-   python3 tools/check_upstream_updates.py
-   ```
-   It compares the `framework_version` markers in your framework files against upstream and lists exactly which methodology files changed, with the diff command for each.
-3. **Merge normally.** `git merge upstream/master` (or `git pull`) three-way-merges upstream's edits around your personalization; because methodology edits rarely touch the lines `/setup` filled in, most updates land cleanly. A conflict in a personalized file is a *feature*, not a failure — it means upstream changed methodology in a section you customized, and the version marker plus its changelog commit tell you why. Resolve by keeping your data and adopting the methodology change around it.
+更新后重新启动 `dashboard/server.js`，打开工作台检查搜索、筛选和岗位池是否正常。
 
 ## Troubleshooting
 
