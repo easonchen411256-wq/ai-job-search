@@ -11,11 +11,12 @@ sources and require a JD/detail fetch before a role is classified.
 Search public pages without logging in. The default source catalogue is:
 
 - **综合招聘：** BOSS直聘、智联招聘、前程无忧、猎聘；
-- **互联网/产品：** BOSS直聘、拉勾、脉脉招聘及企业招聘官网；
-- **校招/应届：** 应届生求职网、51job 校园招聘、智联校园招聘、高校就业网、**高校人才网（高才网，gaoxiaojob.com）**及企业校招官网；
-- **央国企：** 国聘、集团/企业招聘官网、广西相关招聘公告（严格执行广西仅校招/管培、广东默认跳过）；
-- **外企/合资：** LinkedIn Jobs 与企业中国区/全球招聘官网；
-- **事业单位/研究机构：** 广东、广西人社/事业单位公告，高校、医院、研究院官网；广西另查**广西人才网（gxrc.com）**、广西教育厅及学校官网。
+- **互联网/产品：** BOSS直聘、拉勾、脉脉招聘、牛客网、实习僧及企业招聘官网；
+- **校招/应届：** 应届生求职网、51job 校园招聘、智联校园招聘、国家大学生就业服务平台、教育部24365、高校就业网、**高校人才网（高才网，gaoxiaojob.com）**及企业校招官网；
+- **综合/公共招聘：** 中国公共招聘网、广东公共就业服务、广东人才网、广州人才网、深圳人才网、广西人才网（gxrc.com）、南宁人才网；
+- **央国企：** 国聘、国资委/国资央企招聘平台、地方国资委、产业集团和企业招聘官网、广西相关招聘公告（严格执行广西仅校招/管培、广东默认跳过）；
+- **外企/合资/远程：** LinkedIn Jobs、Indeed、Glassdoor、企业中国区/全球招聘官网和公开远程招聘页面；
+- **事业单位/研究机构：** 广东、广西人社/事业单位公告，高校、医院、研究院、医学院校官网；广西另查广西教育厅及学校官网。
 
 Run each channel through `china-public-job-search` in small batches and resolve a
 public employer page wherever possible. This is broad national-channel coverage, not
@@ -81,10 +82,17 @@ site:zhaopin.com <role query>
 site:51job.com <role query>
 site:liepin.com <role query>
 site:lagou.com <role query>
+site:nowcoder.com <role query>
+site:shixiseng.com <role query>
 site:job.iguopin.com <role query>
 site:yingjiesheng.com <role query>
-site:gaoxiaojob.com <role query>
+site:campus.51job.com <role query>
+site:24365.com <role query>
+site:chinajob.gov.cn <role query>
 site:gxrc.com <role query>
+site:gzrc.com.cn <role query>
+site:szjob.com <role query>
+site:gaoxiaojob.com <role query>
 site:jyt.gxzf.gov.cn <role query>
 site:*.edu.cn <role query> (校园招聘 OR 就业网)
 site:*.gov.cn <role query> (招聘 OR 公开招聘)

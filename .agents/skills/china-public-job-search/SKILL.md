@@ -25,12 +25,13 @@ JD or official recruitment notice before classification.
 
 | Channel | Sources and use |
 |---|---|
-| Comprehensive jobs | BOSS直聘 (`zhipin.com`), 智联招聘 (`zhaopin.com`), 前程无忧 (`51job.com`), 猎聘 (`liepin.com`) |
-| Internet and products | BOSS直聘, 拉勾 (`lagou.com`), 脉脉招聘, and employer career pages |
-| Campus and graduate | 应届生求职网 (`yingjiesheng.com`), 51job 校园招聘, 智联校园招聘, university employment offices, employer campus pages |
-| Central/state-owned | 国聘 (`job.iguopin.com`), group/company recruitment pages, Guangxi employer announcements; apply the Guangxi campus-only and Guangdong exclusion policy |
-| Foreign and joint ventures | LinkedIn Jobs plus the employer's China/global career page; use English title variants too |
-| Public institutions | Guangdong/Guangxi human-resources and public-institution recruitment notices, universities, hospitals, research institutes |
+| Comprehensive jobs | BOSS直聘 (`zhipin.com`), 智联招聘 (`zhaopin.com`), 前程无忧 (`51job.com`), 猎聘 (`liepin.com`), 牛客网 (`nowcoder.com`), 实习僧 (`shixiseng.com`) |
+| Internet and products | BOSS直聘, 拉勾 (`lagou.com`), 脉脉招聘, 牛客网, 实习僧, and employer career pages |
+| Campus and graduate | 应届生求职网 (`yingjiesheng.com`), 51job 校园招聘, 智联校园招聘, 国家大学生就业服务平台/教育部24365, university employment offices, employer campus pages |
+| Public employment | 中国公共招聘网、广东公共就业服务、广东/广州/深圳人才网、广西人才网、南宁人才网 |
+| Central/state-owned | 国聘 (`job.iguopin.com`), 国资委/央国企平台, group/company recruitment pages, Guangxi employer announcements; apply the Guangxi campus-only and Guangdong exclusion policy |
+| Foreign and joint ventures | LinkedIn Jobs, Indeed, Glassdoor plus the employer's China/global career page; use English title variants too |
+| Public institutions | Guangdong/Guangxi human-resources and public-institution recruitment notices, education bureaus, universities, hospitals, research institutes |
 
 Never bypass a login, CAPTCHA, SMS/WeChat/QR verification, robots restriction, or
 rate limit. When a board exposes only a login wall, use it as a user-facing lead and
