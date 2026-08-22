@@ -40,6 +40,12 @@ after the candidate fills it.
 ```text
 "AI产品经理" (广东 OR 广西)
 "AI应用产品经理" (广东 OR 广西)
+"人工智能产品经理" OR "大模型产品经理" (广东 OR 广西)
+"生成式AI产品经理" OR "AIGC产品经理" (广东 OR 广西)
+"智能体产品经理" OR "Agent产品经理" (广东 OR 广西)
+"算法产品经理" OR "产品经理（AI方向）" OR "产品经理（智能化方向）" (广东 OR 广西)
+("AI产品经理" OR "AI应用产品经理" OR "AIGC产品经理" OR "智能体产品经理") (秋招 OR 校园招聘 OR 2027届 OR 2026届 OR 应届生 OR 提前批 OR 实习转正) (广东 OR 广西)
+("AI产品经理" OR "人工智能产品经理" OR "大模型产品经理") (最新发布 OR 近7天 OR 近14天) (广东 OR 广西)
 "Agent产品经理" OR "智能体产品经理" (广东 OR 广西)
 "大模型产品经理" (广东 OR 广西)
 "产品经理" OR "产品策划" OR "策略产品经理" (广东 OR 广西)
@@ -47,6 +53,22 @@ after the candidate fills it.
 "消费者洞察" OR "市场研究" OR "产品研究" (广东 OR 广西)
 "UX Research" OR "User Research" OR "Consumer Insights" (Guangdong OR Guangxi)
 ```
+
+### AI 产品经理秋招扩展（每轮选中 AI Product/Product 时必跑）
+
+AI 产品岗位在 BOSS 直聘等平台经常使用项目名称、方向括号或校招批次发布，不能只搜精确的“AI产品经理”。每轮至少覆盖以下来源组合：
+
+```text
+site:zhipin.com (AI产品经理 OR AI应用产品经理 OR AIGC产品经理 OR 大模型产品经理) (秋招 OR 校园招聘 OR 2027届 OR 应届生)
+site:zhaopin.com (人工智能产品经理 OR 智能体产品经理 OR 产品经理（AI方向）) (校招 OR 2027届)
+site:51job.com (AI产品经理 OR 大模型产品经理 OR 产品经理（智能化方向）) (校园招聘 OR 应届生)
+site:liepin.com (AI产品经理 OR 生成式AI产品经理 OR 算法产品经理) (秋招 OR 校招)
+site:yingjiesheng.com (AI产品经理 OR 人工智能产品经理 OR AIGC OR 智能体) (2027届 OR 秋招 OR 校招)
+site:lagou.com (AI产品经理 OR 大模型产品经理 OR Agent产品经理) (校招 OR 应届生)
+site:*.com (AI产品经理 OR 人工智能产品经理 OR 大模型产品经理) (2027校园招聘 OR 秋招) (广州 OR 深圳 OR 珠海 OR 佛山 OR 东莞)
+```
+
+BOSS 只能看到登录墙或摘要时，保存为 P2“待核验线索”，并继续从企业校招官网、应届生、51job 校招和高校就业网寻找同一岗位的公开 JD；没有公开 JD 不得标为 P0/P1。每轮优先检索最近 14 天发布或仍有未来截止日期的岗位，并按公司+岗位+城市去重。
 
 ## Source-focused query templates
 

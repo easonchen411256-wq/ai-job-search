@@ -39,7 +39,9 @@ seek the employer's public job page instead.
 ## Query pattern
 
 For every role or psychology-major query in `search-queries.md`, run no more than
-four source-focused queries per batch. Prefer:
+four source-focused queries per batch. For AI-product autumn searches, use separate
+batches for job boards and employer campus pages so a login wall on BOSS does not
+hide newer postings. Prefer:
 
 ```text
 site:zhipin.com <query>
@@ -54,3 +56,14 @@ site:careers.<employer-domain> <query>
 Rotate sources between runs and deduplicate by official URL or company + title + city.
 The source is a discovery lead, never proof of an open role, qualification rule, or
 deadline.
+
+## AI-product autumn coverage
+
+When the query includes AI product or product roles, expand the title search to
+`AI产品经理`, `AI应用产品经理`, `人工智能产品经理`, `大模型产品经理`, `生成式AI产品经理`,
+`AIGC产品经理`, `智能体产品经理`, `Agent产品经理`, `算法产品经理`, `产品经理（AI方向）`,
+`产品经理（智能化方向）` and `产品策划（AI方向）`. Pair these with `秋招`, `校园招聘`,
+`2027届`, `2026届`, `应届生`, `提前批`, `实习转正`, `最新发布`, `近7天` and `近14天`.
+Search BOSS直聘, 智联招聘, 51job, 猎聘, 拉勾, 应届生 and employer campus pages
+separately. A login-walled result is a P2 discovery lead only; verify it against a
+public JD or official campus notice before assigning P0/P1.

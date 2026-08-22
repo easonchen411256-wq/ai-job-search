@@ -64,6 +64,7 @@ function normaliseRecruitmentType(value, ...context) {
 function buildCoveragePlan(config) {
   const roles = new Set(config.role_families || []);
   const queryGroups = [];
+  if (roles.has("AI Product") || roles.has("Product")) queryGroups.push("AI产品：直接岗位名称", "AI产品：秋招/校招别名", "AI产品：企业校招官网", "AI产品：BOSS/综合平台最近发布");
   if (roles.has("Management Trainee")) queryGroups.push("管培：直接称呼", "管培：秋招项目别名", "管培：产品/科技培养项目", "管培：企业官网/高校就业网");
   if (roles.has("Psychology Teaching")) queryGroups.push("心理教师：高校人才网", "心理教师：广西人才网/教育人社", "心理教师：高校官网", "心理教师：公开招聘公告");
   queryGroups.push("不限专业：央国企/集团秋招", "不限专业：综合平台/就业网");
