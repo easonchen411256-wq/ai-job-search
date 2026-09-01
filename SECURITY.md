@@ -1,22 +1,41 @@
-# Security Policy
+# 安全策略
 
-## Reporting a vulnerability
+## 漏洞反馈
 
-Please report security findings privately through [this repository's GitHub security page](https://github.com/easonchen411256-wq/ai-job-search/security) rather than publishing sensitive details in an issue. Include the affected file, reproduction steps, and impact.
+如果你发现可能影响 `psy-job-search` 的安全问题，请通过本仓库的 [GitHub Security 页面](https://github.com/easonchen411256-wq/psy-job-search/security) 私下提交报告，不要在公开 Issue 中发布敏感细节。
 
-If the private form is unavailable, open a public issue that describes the *class* of problem without a working recipe, and note that you have details to share privately.
+报告中请尽量包含：
 
-## Threat model, honestly stated
+- 受影响的文件、命令或工作流
+- 可复现的步骤
+- 潜在影响范围
+- 适用的修复建议
 
-This is an agentic workflow: an LLM with file access reads untrusted web content (job postings) alongside your personal data (CV, profile, application history). That combination is the main risk surface, and it cannot be fully eliminated - only narrowed. What the framework does about it:
+如果无法使用私密漏洞报告功能，请先提交不包含利用细节的公开 Issue，并说明可以通过私下方式提供完整信息。
 
-- **Untrusted-input rules**: `/apply` and `/rank` treat posting text as data, never instructions - agents are told not to follow directions embedded in postings and not to fetch URLs found inside posting text (the user-supplied posting URL is the one exception). Reviewer research starts from the company identity the user confirmed, never from links in the posting body.
-- **Permission allowlist**: `.claude/settings.json` pre-approves only the specific commands the workflow needs; the `security-guards` CI job fails any PR that widens it, adds package-manifest lifecycle scripts, or weakens the personal-data gitignore rules. Note the allowlist governs Bash commands - the model's native WebFetch/WebSearch tools are outside its reach, which is exactly why the instruction-level rules above exist.
-- **Personal data boundaries**: your populated profile, tracker, salary data, and application archive are gitignored; documents never leave the machine by design (`/notion-sync` syncs filenames only; nothing uploads document content anywhere).
+## 项目安全边界
 
-Instruction-level defenses raise the bar; they are not a sandbox. If you run this workflow against job boards you do not trust at all, review what the agent fetched and wrote before sending anything out.
+这是一个运行在本地的 Agent 工作流。Agent 会同时读取来自招聘网站的外部内容，以及本机上的候选人资料、简历和申请记录。两类数据在同一工作区中被处理，是项目最重要的风险边界。
 
-## Scope notes
+项目采取以下措施降低风险：
 
-- Portal CLI skills make live requests only when you run them; CI never does.
-- Third-party skills copied into this workspace are **not** covered by this policy. Review their source and network destinations before enabling them.
+- **不可信网页内容隔离**：职位描述按数据处理，不应被当作 Agent 指令执行；工作流不会因为职位正文中的指示而改变安全规则。
+- **受控命令权限**：`.claude/settings.json` 只允许工作流需要的命令；新增门户或第三方 Skill 前，应先审查其源代码和网络请求目标。
+- **本地资料保护**：候选人配置、申请跟踪、薪资数据和申请归档默认通过 Git 忽略规则留在本机。推送前必须检查 Git 暂存区，确认没有包含个人敏感信息。
+- **人工确认**：项目不会代替用户登录招聘网站或自动投递；生成简历、求职信或发送任何外部内容前，应由用户检查结果。
+- **有限的外部同步**：任何同步功能都应先确认目标服务、同步内容和权限范围，不应默认上传简历或其他个人材料。
+
+这些措施不能替代操作系统权限、账号安全和人工复核。使用不熟悉的职位门户、第三方 Skill 或外部脚本时，请先阅读其实现，并检查 Agent 新建或修改的文件。
+
+## 不在支持范围内的内容
+
+- 招聘网站自身的漏洞或服务中断
+- 用户主动安装的第三方 Skill、脚本或依赖中的问题
+- 因用户公开提交个人资料、API 密钥或申请材料而造成的泄露
+- 不遵守招聘网站服务条款、访问限制或隐私政策的使用方式
+
+第三方组件不自动继承本项目的安全保证。启用前请单独评估其代码、依赖和网络行为。
+
+## 依赖与维护
+
+职位门户 CLI 只在用户主动运行搜索时发起网络请求，持续集成不会主动抓取职位网站。项目会通过测试、权限检查和依赖配置审查来降低回归风险。
