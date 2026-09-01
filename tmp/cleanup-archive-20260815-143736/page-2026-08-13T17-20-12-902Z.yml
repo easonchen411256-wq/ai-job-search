@@ -1,0 +1,258 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - paragraph [ref=e4]: AI JOB SEARCH
+      - heading "求职工作台" [level=1] [ref=e5]
+    - generic [ref=e6]:
+      - generic [ref=e7]: 更新于 2026/8/14 01:20:12
+      - button "刷新" [ref=e8] [cursor=pointer]
+      - button "上传简历" [ref=e9] [cursor=pointer]
+      - button "新建搜岗任务" [ref=e10] [cursor=pointer]
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - text: 待筛选
+        - strong [ref=e14]: "5"
+      - generic [ref=e15]:
+        - text: 待投递
+        - strong [ref=e16]: "0"
+      - generic [ref=e17]:
+        - text: 已投递
+        - strong [ref=e18]: "0"
+      - generic [ref=e19]:
+        - text: 面试中
+        - strong [ref=e20]: "0"
+      - generic [ref=e21]:
+        - text: Offer
+        - strong [ref=e22]: "0"
+      - generic [ref=e23]:
+        - text: 已结束
+        - strong [ref=e24]: "0"
+      - generic [ref=e25]:
+        - text: P0 优先
+        - strong [ref=e26]: "1"
+      - generic [ref=e27]:
+        - text: 心理学触发
+        - strong [ref=e28]: "1"
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: SEARCH MONITOR
+          - heading "搜岗执行状态" [level=2] [ref=e33]
+          - paragraph [ref=e34]: 广东、广西 · AI 产品、产品经理、用户研究、用户洞察、管培生、
+        - generic [ref=e35]: 搜索中
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: 当前阶段
+          - strong [ref=e39]: 发现批次：BOSS/智联/51job/猎聘/拉勾/脉脉/应届生/高校就业网/国聘/国企/企业官方招聘页
+        - generic [ref=e40]:
+          - generic [ref=e41]: 当前渠道
+          - strong [ref=e42]: 企业官方招聘页
+        - generic [ref=e43]:
+          - generic [ref=e44]: 当前关键词
+          - strong [ref=e45]: AI 产品、产品经理、用户研究、用户洞察、管培生、
+        - generic [ref=e46]:
+          - generic [ref=e47]: 最近更新
+          - strong [ref=e48]: 2026/8/14 01:19:55
+      - generic [ref=e51]:
+        - generic [ref=e52]: 进度 35%
+        - generic [ref=e53]: 发现 20 个
+        - generic [ref=e54]: 已解析 0 个
+      - generic [ref=e55]:
+        - strong [ref=e56]: 运行日志
+        - list [ref=e57]:
+          - listitem [ref=e58]: "2026-08-13T17:19:32.639Z | stderr: codex Campus channel is productive: 迅雷 2027 product trainee, 联想 2027 campus (AI product manager), 万兴科技 pr"
+          - listitem [ref=e59]: "2026-08-13T17:19:32.761Z | stderr: web search: site:job.iguopin.com 产品经理 广东 OR 广西 ..."
+          - listitem [ref=e60]: "2026-08-13T17:19:42.649Z | stderr: codex Guangxi state-owned leads: 广西联通 2027 campus (product/AI direction), 中国移动广西 2027 intern program, and"
+          - listitem [ref=e61]: "2026-08-13T17:19:42.941Z | stderr: web search: 腾讯 2027 校园招聘 产品经理 深圳 官网 ..."
+          - listitem [ref=e62]: "2026-08-13T17:19:53.358Z | stderr: codex Strong yield from official campus channels: 腾讯、字节 (AI PM), 大疆 (软件产品经理, open till 8/25), vivo (市场与用户"
+          - listitem [ref=e63]: "2026-08-13T17:20:00.617Z | stderr: web search: web search: site:linkedin.com/jobs product manager Shenzhen OR Guangzhou OR Guangdong ..."
+          - listitem [ref=e64]: "2026-08-13T17:20:07.485Z | stderr: codex LinkedIn blocks site: queries, but foreign employers surfaced via Chinese channels (Shopee 2027 秋招"
+          - listitem [ref=e65]: "2026-08-13T17:20:07.486Z | stderr: web search: web search: 广西 高校 心理学 专任教师 OR 心理健康教育教师 招聘 2026 公告 ..."
+    - generic [ref=e66]:
+      - complementary [ref=e67]:
+        - generic [ref=e68]:
+          - heading "筛选岗位" [level=2] [ref=e69]
+          - button "清除" [ref=e70] [cursor=pointer]
+        - generic [ref=e71]:
+          - text: 搜索
+          - textbox "搜索" [ref=e72]:
+            - /placeholder: 公司、岗位、城市
+        - generic [ref=e73]:
+          - text: 地区
+          - combobox "地区" [ref=e74]:
+            - option "全部地区" [selected]
+            - option "Guangdong"
+        - generic [ref=e75]:
+          - text: 岗位方向
+          - combobox "岗位方向" [ref=e76]:
+            - option "全部方向" [selected]
+            - option "AI Product"
+            - option "Product"
+            - option "UXR / Insight"
+        - generic [ref=e77]:
+          - text: 优先级
+          - combobox "优先级" [ref=e78]:
+            - option "全部优先级" [selected]
+            - option "P0"
+            - option "P1"
+            - option "P2"
+            - option "Skip"
+        - generic [ref=e79]:
+          - text: 流程阶段
+          - combobox "流程阶段" [ref=e80]:
+            - option "全部阶段" [selected]
+            - option "待筛选"
+            - option "待投递"
+            - option "已投递"
+            - option "面试中"
+            - option "Offer"
+            - option "已结束"
+        - generic [ref=e81]:
+          - checkbox "仅心理学触发岗位" [ref=e82]
+          - text: 仅心理学触发岗位
+        - paragraph [ref=e83]: 先按岗位证据筛选，再由你决定是否推进投递。
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - paragraph [ref=e87]: JOB POOL
+            - heading "岗位池 5 个" [level=2] [ref=e88]
+          - generic [ref=e89]:
+            - generic [ref=e90]: P0
+            - generic [ref=e92]: P1
+            - generic [ref=e94]: P2
+        - generic [ref=e96]:
+          - button "全部 5" [ref=e97] [cursor=pointer]
+          - button "待筛选 5" [ref=e98] [cursor=pointer]
+          - button "待投递 0" [ref=e99] [cursor=pointer]
+          - button "已投递 0" [ref=e100] [cursor=pointer]
+          - button "面试中 0" [ref=e101] [cursor=pointer]
+          - button "Offer 0" [ref=e102] [cursor=pointer]
+          - button "已结束 0" [ref=e103] [cursor=pointer]
+        - generic [ref=e104]:
+          - article [ref=e105] [cursor=pointer]:
+            - generic [ref=e106]:
+              - heading "Consumer Insights Intern" [level=3] [ref=e107]
+              - paragraph [ref=e108]: SHEIN · 广东 · Guangzhou
+              - generic [ref=e109]:
+                - generic [ref=e110]: UXR / Insight
+                - generic [ref=e111]: internship
+                - generic [ref=e112]: 心理学触发
+                - generic [ref=e113]: 截止 2027-04-04
+                - generic [ref=e114]: 88 分
+            - generic [ref=e115]:
+              - combobox [ref=e116]:
+                - option "P0" [selected]
+                - option "P1"
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e117]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e118] [cursor=pointer]:
+            - generic [ref=e119]:
+              - heading "AI Product Manager" [level=3] [ref=e120]
+              - paragraph [ref=e121]: OPPO · 广东 · Shenzhen
+              - generic [ref=e122]:
+                - generic [ref=e123]: AI Product
+                - generic [ref=e124]: campus
+            - generic [ref=e125]:
+              - combobox [ref=e126]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e127]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e128] [cursor=pointer]:
+            - generic [ref=e129]:
+              - heading "Product Manager" [level=3] [ref=e130]
+              - paragraph [ref=e131]: Pudu Robotics · 广东 · Shenzhen
+              - generic [ref=e132]:
+                - generic [ref=e133]: Product
+                - generic [ref=e134]: campus
+                - generic [ref=e135]: 70 分
+            - generic [ref=e136]:
+              - combobox [ref=e137]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e138]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e139] [cursor=pointer]:
+            - generic [ref=e140]:
+              - heading "Software Product Manager" [level=3] [ref=e141]
+              - paragraph [ref=e142]: EcoFlow · 广东 · Shenzhen
+              - generic [ref=e143]:
+                - generic [ref=e144]: Product
+                - generic [ref=e145]: campus
+                - generic [ref=e146]: 61 分
+            - generic [ref=e147]:
+              - combobox [ref=e148]:
+                - option "P0"
+                - option "P1"
+                - option "P2" [selected]
+                - option "Skip"
+              - combobox [ref=e149]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e150] [cursor=pointer]:
+            - generic [ref=e151]:
+              - heading "2027 Intern Program - User Research direction" [level=3] [ref=e152]
+              - paragraph [ref=e153]: Lenovo · 广东 · Shenzhen
+              - generic [ref=e154]:
+                - generic [ref=e155]: UXR / Insight
+                - generic [ref=e156]: internship
+            - generic [ref=e157]:
+              - combobox [ref=e158]:
+                - option "P0"
+                - option "P1"
+                - option "P2" [selected]
+                - option "Skip"
+              - combobox [ref=e159]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+    - generic [ref=e160]:
+      - generic [ref=e161]:
+        - generic [ref=e162]:
+          - paragraph [ref=e163]: NEXT ACTIONS
+          - heading "招聘待办" [level=2] [ref=e164]
+        - button "+ 添加待办 / 事件" [ref=e165] [cursor=pointer]
+      - generic [ref=e166]:
+        - generic [ref=e167]:
+          - heading "已逾期 0" [level=3] [ref=e168]
+          - paragraph [ref=e169]: 暂无事项
+        - generic [ref=e170]:
+          - heading "今天 0" [level=3] [ref=e171]
+          - paragraph [ref=e172]: 暂无事项
+        - generic [ref=e173]:
+          - heading "未来 7 天 0" [level=3] [ref=e174]
+          - paragraph [ref=e175]: 暂无事项
+        - generic [ref=e176]:
+          - heading "待安排 0" [level=3] [ref=e177]
+          - paragraph [ref=e178]: 暂无事项
+  - complementary [ref=e179]:
+    - button [ref=e180] [cursor=pointer]: ×

@@ -1,0 +1,548 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - paragraph [ref=e4]: AI JOB SEARCH
+      - heading "求职工作台" [level=1] [ref=e5]
+    - generic [ref=e6]:
+      - generic [ref=e7]: 更新于 2026/8/14 01:33:41
+      - button "刷新" [ref=e8] [cursor=pointer]
+      - button "上传简历" [ref=e9] [cursor=pointer]
+      - button "新建搜岗任务" [ref=e10] [cursor=pointer]
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - text: 待筛选
+        - strong [ref=e14]: "19"
+      - generic [ref=e15]:
+        - text: 待投递
+        - strong [ref=e16]: "0"
+      - generic [ref=e17]:
+        - text: 已投递
+        - strong [ref=e18]: "0"
+      - generic [ref=e19]:
+        - text: 面试中
+        - strong [ref=e20]: "0"
+      - generic [ref=e21]:
+        - text: Offer
+        - strong [ref=e22]: "0"
+      - generic [ref=e23]:
+        - text: 已结束
+        - strong [ref=e24]: "0"
+      - generic [ref=e25]:
+        - text: P0 优先
+        - strong [ref=e26]: "3"
+      - generic [ref=e27]:
+        - text: 心理学触发
+        - strong [ref=e28]: "2"
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: SEARCH MONITOR
+          - heading "搜岗执行状态" [level=2] [ref=e33]
+          - paragraph [ref=e34]: 广东、广西 · AI 产品、产品经理、用户研究、用户洞察、管培生、
+        - generic [ref=e35]: 搜索完成
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - text: 当前阶段
+          - strong [ref=e38]: 搜索完成并已入库
+        - generic [ref=e39]:
+          - text: 当前渠道
+          - strong [ref=e40]: BOSS直聘、智联招聘、51job、猎聘、拉勾、脉脉、应届生求职网、高校就业网、国聘、国企官网、企业官方招聘页、LinkedIn/外企官网、公开招聘公告
+        - generic [ref=e41]:
+          - text: 当前关键词
+          - strong [ref=e42]: AI 产品、产品经理、用户研究、用户洞察、管培生、
+        - generic [ref=e43]:
+          - text: 最近更新
+          - strong [ref=e44]: 2026/8/14 01:25:43
+      - generic [ref=e47]:
+        - generic [ref=e48]: 进度 100%
+        - generic [ref=e49]: 发现 26 个
+        - generic [ref=e50]: 已解析 14 个
+      - generic [ref=e51]:
+        - strong [ref=e52]: 运行日志
+        - list [ref=e53]:
+          - listitem [ref=e54]: "2026-08-13T17:25:02.211Z | stderr: codex Both pages confirm the programs (小米 2027届全球校招 at SYSU career page; ZURU 2027届校招, deadline 2026-09-1"
+          - listitem [ref=e55]: "2026-08-13T17:25:17.651Z | stderr: codex Both leads verified at program level. Posting 小米 and ZURU to the dashboard now, mirroring the exist"
+          - listitem [ref=e56]: "2026-08-13T17:25:27.672Z | stderr: codex Both leads stored (14 in-pool jobs total). Now the final completion PATCH with an honest summary."
+          - listitem [ref=e57]: "2026-08-13T17:25:40.657Z | stderr: codex One correction: my completion message miscounted the priority split (it's 2 P0 / 9 P1 / 3 P2, not 1"
+          - listitem [ref=e58]: "2026-08-13T17:25:47.129Z | stderr: codex Dashboard is now completed with corrected counts. Let me pull the stored URLs so the summary links"
+          - listitem [ref=e59]: "2026-08-13T17:26:01.892Z | stderr: codex 搜索执行已全部完成，dashboard 已置为 `completed / 100%`，岗位池共 14 条新核验结果入库（2 P0 / 9 P1 / 3 P2），13 类渠道全部覆盖。 ## 本轮入库"
+          - listitem [ref=e60]: "2026-08-13T17:26:03.649Z | 搜索执行已全部完成，dashboard 已置为 `completed / 100%`，岗位池共 14 条新核验结果入库（2 P0 / 9 P1 / 3 P2），13 类渠道全部覆盖。 ## 本轮入库岗位（2026-08-14）"
+          - listitem [ref=e61]: 2026-08-13T17:26:03.971Z | 本地执行器已退出，退出码 0。
+    - generic [ref=e62]:
+      - complementary [ref=e63]:
+        - generic [ref=e64]:
+          - heading "筛选岗位" [level=2] [ref=e65]
+          - button "清除" [ref=e66] [cursor=pointer]
+        - generic [ref=e67]:
+          - text: 搜索
+          - textbox "搜索" [ref=e68]:
+            - /placeholder: 公司、岗位、城市
+        - generic [ref=e69]:
+          - text: 地区
+          - combobox "地区" [ref=e70]:
+            - option "全部地区" [selected]
+            - option "Guangdong"
+        - generic [ref=e71]:
+          - text: 岗位方向
+          - combobox "岗位方向" [ref=e72]:
+            - option "全部方向" [selected]
+            - option "AI Product"
+            - option "Management Trainee"
+            - option "Product"
+            - option "Product / AI Product"
+            - option "UXR / Insight"
+        - generic [ref=e73]:
+          - text: 优先级
+          - combobox "优先级" [ref=e74]:
+            - option "全部优先级" [selected]
+            - option "P0"
+            - option "P1"
+            - option "P2"
+            - option "Skip"
+        - generic [ref=e75]:
+          - text: 流程阶段
+          - combobox "流程阶段" [ref=e76]:
+            - option "全部阶段" [selected]
+            - option "待筛选"
+            - option "待投递"
+            - option "已投递"
+            - option "面试中"
+            - option "Offer"
+            - option "已结束"
+        - generic [ref=e77]:
+          - checkbox "仅心理学触发岗位" [ref=e78]
+          - text: 仅心理学触发岗位
+        - paragraph [ref=e79]: 先按岗位证据筛选，再由你决定是否推进投递。
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - paragraph [ref=e83]: JOB POOL
+            - heading "岗位池 19 个" [level=2] [ref=e84]
+          - generic [ref=e85]:
+            - generic [ref=e86]: P0
+            - generic [ref=e88]: P1
+            - generic [ref=e90]: P2
+        - generic [ref=e92]:
+          - button "全部 19" [ref=e93] [cursor=pointer]
+          - button "待筛选 19" [ref=e94] [cursor=pointer]
+          - button "待投递 0" [ref=e95] [cursor=pointer]
+          - button "已投递 0" [ref=e96] [cursor=pointer]
+          - button "面试中 0" [ref=e97] [cursor=pointer]
+          - button "Offer 0" [ref=e98] [cursor=pointer]
+          - button "已结束 0" [ref=e99] [cursor=pointer]
+        - generic [ref=e100]:
+          - article [ref=e101] [cursor=pointer]:
+            - generic [ref=e102]:
+              - heading "2027校园招聘-产品类（含AI产品经理）" [level=3] [ref=e103]
+              - paragraph [ref=e104]: 腾讯 · 广东 · 深圳
+              - generic [ref=e105]:
+                - generic [ref=e106]: AI产品
+                - generic [ref=e107]: campus
+            - generic [ref=e108]:
+              - combobox [ref=e109]:
+                - option "P0" [selected]
+                - option "P1"
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e110]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e111] [cursor=pointer]:
+            - generic [ref=e112]:
+              - heading "AI产品经理（2027/2028届校招）" [level=3] [ref=e113]
+              - paragraph [ref=e114]: 字节跳动 · 广东 · 深圳
+              - generic [ref=e115]:
+                - generic [ref=e116]: AI产品
+                - generic [ref=e117]: campus
+                - generic [ref=e118]: 截止 2026-11-13
+            - generic [ref=e119]:
+              - combobox [ref=e120]:
+                - option "P0" [selected]
+                - option "P1"
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e121]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e122] [cursor=pointer]:
+            - generic [ref=e123]:
+              - heading "消费者洞察实习生" [level=3] [ref=e124]
+              - paragraph [ref=e125]: SHEIN · 广东 · 广州
+              - generic [ref=e126]:
+                - generic [ref=e127]: 用户研究/洞察
+                - generic [ref=e128]: internship
+                - generic [ref=e129]: 心理学触发
+                - generic [ref=e130]: 截止 2027-04-04
+                - generic [ref=e131]: 88 分
+            - generic [ref=e132]:
+              - combobox [ref=e133]:
+                - option "P0" [selected]
+                - option "P1"
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e134]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e135] [cursor=pointer]:
+            - generic [ref=e136]:
+              - heading "2027“拓疆者”校园招聘-软件产品经理" [level=3] [ref=e137]
+              - paragraph [ref=e138]: 大疆创新（DJI） · 广东 · 深圳
+              - generic [ref=e139]:
+                - generic [ref=e140]: 产品
+                - generic [ref=e141]: campus
+                - generic [ref=e142]: 截止 2026-08-25
+            - generic [ref=e143]:
+              - combobox [ref=e144]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e145]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e146] [cursor=pointer]:
+            - generic [ref=e147]:
+              - heading "2027校园招聘-产品方向" [level=3] [ref=e148]
+              - paragraph [ref=e149]: 京东 · 广东 · 深圳
+              - generic [ref=e150]:
+                - generic [ref=e151]: 产品
+                - generic [ref=e152]: campus
+                - generic [ref=e153]: 截止 2026-11-30
+            - generic [ref=e154]:
+              - combobox [ref=e155]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e156]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e157] [cursor=pointer]:
+            - generic [ref=e158]:
+              - heading "2027届转正实习-产品经理" [level=3] [ref=e159]
+              - paragraph [ref=e160]: 美团 · 广东 · 深圳
+              - generic [ref=e161]:
+                - generic [ref=e162]: 产品
+                - generic [ref=e163]: internship
+                - generic [ref=e164]: 心理学触发
+            - generic [ref=e165]:
+              - combobox [ref=e166]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e167]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e168] [cursor=pointer]:
+            - generic [ref=e169]:
+              - heading "2027届秋招-产品设计类/战略管理类" [level=3] [ref=e170]
+              - paragraph [ref=e171]: 荣耀终端 · 广东 · 深圳
+              - generic [ref=e172]:
+                - generic [ref=e173]: 产品
+                - generic [ref=e174]: campus
+            - generic [ref=e175]:
+              - combobox [ref=e176]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e177]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e178] [cursor=pointer]:
+            - generic [ref=e179]:
+              - heading "2027届校园招聘-产品类/用户体验类" [level=3] [ref=e180]
+              - paragraph [ref=e181]: 网易游戏（互娱） · 广东 · 广州
+              - generic [ref=e182]:
+                - generic [ref=e183]: 产品
+                - generic [ref=e184]: campus
+            - generic [ref=e185]:
+              - combobox [ref=e186]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e187]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e188] [cursor=pointer]:
+            - generic [ref=e189]:
+              - heading "2027届全球校园招聘（产品类方向）" [level=3] [ref=e190]
+              - paragraph [ref=e191]: 小米集团 · 广东 · 深圳（多城市可选）
+              - generic [ref=e192]:
+                - generic [ref=e193]: Product / AI Product
+                - generic [ref=e194]: campus
+            - generic [ref=e195]:
+              - combobox [ref=e196]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e197]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e198] [cursor=pointer]:
+            - generic [ref=e199]:
+              - heading "2027校园招聘-XPEP产品星计划（产品经理）" [level=3] [ref=e200]
+              - paragraph [ref=e201]: 迅雷 · 广东 · 深圳
+              - generic [ref=e202]:
+                - generic [ref=e203]: 管培生
+                - generic [ref=e204]: campus
+                - generic [ref=e205]: 截止 2026-10-31
+            - generic [ref=e206]:
+              - combobox [ref=e207]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e208]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e209] [cursor=pointer]:
+            - generic [ref=e210]:
+              - heading "AI产品经理" [level=3] [ref=e211]
+              - paragraph [ref=e212]: OPPO · 广东 · 深圳
+              - generic [ref=e213]:
+                - generic [ref=e214]: AI产品
+                - generic [ref=e215]: campus
+            - generic [ref=e216]:
+              - combobox [ref=e217]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e218]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e219] [cursor=pointer]:
+            - generic [ref=e220]:
+              - heading "产品经理" [level=3] [ref=e221]
+              - paragraph [ref=e222]: Pudu Robotics · 广东 · 深圳
+              - generic [ref=e223]:
+                - generic [ref=e224]: 产品
+                - generic [ref=e225]: campus
+                - generic [ref=e226]: 70 分
+            - generic [ref=e227]:
+              - combobox [ref=e228]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e229]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e230] [cursor=pointer]:
+            - generic [ref=e231]:
+              - heading "2027秋季校园招聘-产品经理/策略产品经理" [level=3] [ref=e232]
+              - paragraph [ref=e233]: Shopee（深圳虾皮） · 广东 · 深圳
+              - generic [ref=e234]:
+                - generic [ref=e235]: 产品
+                - generic [ref=e236]: campus
+                - generic [ref=e237]: 截止 2026-11-10
+            - generic [ref=e238]:
+              - combobox [ref=e239]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e240]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e241] [cursor=pointer]:
+            - generic [ref=e242]:
+              - heading "2027届全球校园招聘-产品运营类/市场与用户研究" [level=3] [ref=e243]
+              - paragraph [ref=e244]: vivo · 广东 · 东莞
+              - generic [ref=e245]:
+                - generic [ref=e246]: 用户研究/洞察
+                - generic [ref=e247]: campus
+                - generic [ref=e248]: 截止 2026-09-15
+            - generic [ref=e249]:
+              - combobox [ref=e250]:
+                - option "P0"
+                - option "P1" [selected]
+                - option "P2"
+                - option "Skip"
+              - combobox [ref=e251]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e252] [cursor=pointer]:
+            - generic [ref=e253]:
+              - heading "AI产品经理实习（27届）" [level=3] [ref=e254]
+              - paragraph [ref=e255]: 广州链股科技 · 广东 · 广州
+              - generic [ref=e256]:
+                - generic [ref=e257]: AI产品
+                - generic [ref=e258]: internship
+            - generic [ref=e259]:
+              - combobox [ref=e260]:
+                - option "P0"
+                - option "P1"
+                - option "P2" [selected]
+                - option "Skip"
+              - combobox [ref=e261]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e262] [cursor=pointer]:
+            - generic [ref=e263]:
+              - heading "产品策划实习生（2027届）" [level=3] [ref=e264]
+              - paragraph [ref=e265]: 万兴科技 · 广东 · 深圳
+              - generic [ref=e266]:
+                - generic [ref=e267]: 产品
+                - generic [ref=e268]: internship
+            - generic [ref=e269]:
+              - combobox [ref=e270]:
+                - option "P0"
+                - option "P1"
+                - option "P2" [selected]
+                - option "Skip"
+              - combobox [ref=e271]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e272] [cursor=pointer]:
+            - generic [ref=e273]:
+              - heading "软件产品经理" [level=3] [ref=e274]
+              - paragraph [ref=e275]: EcoFlow · 广东 · 深圳
+              - generic [ref=e276]:
+                - generic [ref=e277]: 产品
+                - generic [ref=e278]: campus
+                - generic [ref=e279]: 61 分
+            - generic [ref=e280]:
+              - combobox [ref=e281]:
+                - option "P0"
+                - option "P1"
+                - option "P2" [selected]
+                - option "Skip"
+              - combobox [ref=e282]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e283] [cursor=pointer]:
+            - generic [ref=e284]:
+              - heading "2027实习计划-用户研究方向" [level=3] [ref=e285]
+              - paragraph [ref=e286]: Lenovo · 广东 · 深圳
+              - generic [ref=e287]:
+                - generic [ref=e288]: 用户研究/洞察
+                - generic [ref=e289]: internship
+            - generic [ref=e290]:
+              - combobox [ref=e291]:
+                - option "P0"
+                - option "P1"
+                - option "P2" [selected]
+                - option "Skip"
+              - combobox [ref=e292]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+          - article [ref=e293] [cursor=pointer]:
+            - generic [ref=e294]:
+              - heading "2027届校园招聘（商科/创意/设计/研发/制造）" [level=3] [ref=e295]
+              - paragraph [ref=e296]: ZURU · 广东 · 广州/深圳/东莞
+              - generic [ref=e297]:
+                - generic [ref=e298]: 管培生
+                - generic [ref=e299]: campus
+                - generic [ref=e300]: 截止 2026-09-16
+            - generic [ref=e301]:
+              - combobox [ref=e302]:
+                - option "P0"
+                - option "P1"
+                - option "P2" [selected]
+                - option "Skip"
+              - combobox [ref=e303]:
+                - option "待筛选" [selected]
+                - option "待投递"
+                - option "已投递"
+                - option "面试中"
+                - option "Offer"
+                - option "已结束"
+    - generic [ref=e304]:
+      - generic [ref=e305]:
+        - generic [ref=e306]:
+          - paragraph [ref=e307]: NEXT ACTIONS
+          - heading "招聘待办" [level=2] [ref=e308]
+        - button "+ 添加待办 / 事件" [ref=e309] [cursor=pointer]
+      - generic [ref=e310]:
+        - generic [ref=e311]:
+          - heading "已逾期 0" [level=3] [ref=e312]
+          - paragraph [ref=e313]: 暂无事项
+        - generic [ref=e314]:
+          - heading "今天 0" [level=3] [ref=e315]
+          - paragraph [ref=e316]: 暂无事项
+        - generic [ref=e317]:
+          - heading "未来 7 天 0" [level=3] [ref=e318]
+          - paragraph [ref=e319]: 暂无事项
+        - generic [ref=e320]:
+          - heading "待安排 0" [level=3] [ref=e321]
+          - paragraph [ref=e322]: 暂无事项
+  - complementary [ref=e323]:
+    - button [ref=e324] [cursor=pointer]: ×

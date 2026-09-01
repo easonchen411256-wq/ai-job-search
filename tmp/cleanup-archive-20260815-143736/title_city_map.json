@@ -1,0 +1,24 @@
+{
+  "titles": {
+    "AI Product Manager": "AI产品经理",
+    "Product Manager": "产品经理",
+    "Software Product Manager": "软件产品经理",
+    "Consumer Insights Intern": "消费者洞察实习生",
+    "2027 Intern Program - User Research direction": "2027实习计划-用户研究方向"
+  },
+  "cities": {
+    "Shenzhen": "深圳",
+    "Guangzhou": "广州",
+    "Dongguan": "东莞",
+    "Shenzhen（多城市可选）": "深圳（多城市可选）",
+    "Guangzhou/Shenzhen/Dongguan": "广州/深圳/东莞",
+    "Nanning": "南宁",
+    "Guilin": "桂林",
+    "Liuzhou": "柳州",
+    "Foshan": "佛山",
+    "Zhuhai": "珠海",
+    "Zhongshan": "中山",
+    "Huizhou": "惠州",
+    "Shantou": "汕头"
+  }
+}

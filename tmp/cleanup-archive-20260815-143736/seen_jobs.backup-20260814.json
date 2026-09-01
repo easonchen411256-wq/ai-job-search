@@ -1,0 +1,767 @@
+{
+  "seen": {
+    "shein__consumer insights intern__1786623038691": {
+      "title": "Consumer Insights Intern",
+      "company": "SHEIN",
+      "url": "https://www.deizao.net/m/index/shixixq/jobid/121448",
+      "official_url": "https://www.deizao.net/m/index/shixixq/jobid/121448",
+      "source": "Public job listing",
+      "province": "Guangdong",
+      "city": "Guangzhou",
+      "company_type": "private",
+      "recruitment_type": "internship",
+      "role_family": "UXR / Insight",
+      "priority": "P0",
+      "workflow_status": "pending_review",
+      "deadline": "2027-04-04",
+      "psychology_trigger": true,
+      "psychology_trigger_type": "preferred",
+      "psychology_evidence": "Psychology or social-science background is preferred.",
+      "rank_score": 88,
+      "rank_verdict": "P0",
+      "strengths": [
+        "Psychology major is preferred",
+        "User interviews, questionnaires, and product testing",
+        "Guangzhou"
+      ],
+      "gaps": [
+        "Requires fluent spoken English",
+        "Requires 4 to 5 days weekly for 4+ months"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "Confirm current campus eligibility and exact closing date"
+      ],
+      "responsibilities": "Conduct product testing, user interviews, questionnaires, data analysis, and research reporting.",
+      "must_have_skills": [
+        "Qualitative research",
+        "Survey and data analysis"
+      ],
+      "nice_to_have_skills": [
+        "Fluent spoken English"
+      ],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "Public listing; verify on the employer channel before applying."
+    },
+    "pudu robotics__product manager__1786623038705": {
+      "title": "Product Manager",
+      "company": "Pudu Robotics",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/116156.html",
+      "official_url": "https://career.nankai.edu.cn/correcruit/content/id/116156.html",
+      "source": "University career notice",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "Product",
+      "priority": "P1",
+      "workflow_status": "pending_review",
+      "deadline": "",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": 70,
+      "rank_verdict": "P1",
+      "strengths": [
+        "Product role",
+        "Shenzhen",
+        "2027 campus recruitment"
+      ],
+      "gaps": [
+        "JD requirements were not fully disclosed"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "Obtain official job description and eligibility details"
+      ],
+      "responsibilities": "Product Manager role listed in the public 2027 recruitment notice.",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "Public university career notice; no detailed JD in the notice."
+    },
+    "ecoflow__software product manager__1786623038711": {
+      "title": "Software Product Manager",
+      "company": "EcoFlow",
+      "url": "https://career.hebut.edu.cn/home/correcruit/content/id/79005.html",
+      "official_url": "https://career.hebut.edu.cn/home/correcruit/content/id/79005.html",
+      "source": "University career notice",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "Product",
+      "priority": "P2",
+      "workflow_status": "pending_review",
+      "deadline": "",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": 61,
+      "rank_verdict": "P2",
+      "strengths": [
+        "Product role",
+        "Shenzhen",
+        "2027 early campus recruitment"
+      ],
+      "gaps": [
+        "Likely strong technical and R&D background expectation"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "Obtain official JD and degree requirements"
+      ],
+      "responsibilities": "Software Product Manager role listed in a public 2027 early recruitment notice.",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "Public university career notice; verify on the employer recruitment site."
+    },
+    "oppo__ai product manager__1786628117562": {
+      "title": "AI Product Manager",
+      "company": "OPPO",
+      "url": "https://careers.oppo.com/university/oppo/campus/post/1839?recruitType=Graduate",
+      "official_url": "https://careers.oppo.com/university/oppo/campus/post/1839?recruitType=Graduate",
+      "source": "OPPO official careers",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "AI Product",
+      "priority": "P1",
+      "workflow_status": "pending_review",
+      "deadline": "",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P1",
+      "strengths": [
+        "Official 2027 campus posting in Shenzhen",
+        "Direct AI product role with user-needs and product-planning responsibilities",
+        "AI product capability is explicitly required"
+      ],
+      "gaps": [
+        "Bachelor degree or above required",
+        "Fluent English and STEM background are preferred",
+        "Candidate graduation eligibility is not configured in the workspace"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "No published application deadline on the public page",
+        "Candidate degree, graduation year, and English level require confirmation"
+      ],
+      "responsibilities": "Use user understanding to plan and refine phone products; work with development, marketing, and sales to deliver products.",
+      "must_have_skills": [
+        "Structured thinking",
+        "User insight",
+        "Understanding of AI capabilities and applications"
+      ],
+      "nice_to_have_skills": [
+        "Fluent English",
+        "STEM background"
+      ],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "Public official careers page; published 2026-07-15 for 2027 campus recruitment."
+    },
+    "lenovo__2027 intern program - user research direction__1786628117565": {
+      "title": "2027 Intern Program - User Research direction",
+      "company": "Lenovo",
+      "url": "https://fjirsm.cas.cn/yjsjy/jyzd/jyxx/202603/t20260317_8160426.html",
+      "official_url": "https://talent.lenovo.com.cn",
+      "source": "Chinese Academy of Sciences Fujian Institute university employment notice",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "internship",
+      "role_family": "UXR / Insight",
+      "priority": "P2",
+      "workflow_status": "pending_review",
+      "deadline": "",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P2",
+      "strengths": [
+        "University employment notice lists User Research under the 2027 intern program",
+        "Shenzhen is explicitly one of the work locations",
+        "Product and design roles are described as open to all majors"
+      ],
+      "gaps": [
+        "No individual User Research JD or specific Shenzhen allocation is published",
+        "Internship eligibility is limited to the 2027 graduating class"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "No individual official requisition URL was exposed in the notice",
+        "No deadline or detailed qualifications were published",
+        "Candidate graduation eligibility is not configured in the workspace"
+      ],
+      "responsibilities": "User Research is listed as a design-direction opportunity in Lenovo 2027 internship recruitment.",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "Public university employment notice updated 2026-03-17; live recruitment-program notice, but individual JD remains unavailable."
+    },
+    "字节跳动__ai产品经理（2027/2028届校招）__1786641803723": {
+      "title": "AI产品经理（2027/2028届校招）",
+      "company": "字节跳动",
+      "url": "https://www.nowcoder.com/jobs/detail/459856",
+      "official_url": "https://jobs.bytedance.com/campus",
+      "source": "牛客校招JD（官方转载）",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "AI Product",
+      "priority": "P0",
+      "workflow_status": "pending_review",
+      "deadline": "2026-11-13",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P0",
+      "strengths": [
+        "AI产品校招岗，所有专业完全开放、无专业限制",
+        "职责含校园用户需求调研、AI小功能全流程落地与反馈复盘",
+        "深圳，投递期2026-08-13至11-13"
+      ],
+      "gaps": [
+        "岗位隶属抖音音乐AI产品团队，为具体业务线校招"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "官方校招站JD需登录查看",
+        "录用性质（实习/正式）以官方投递页为准"
+      ],
+      "responsibilities": "参与字节C端AI创新产品场景探索、校园用户需求调研、AI小功能全流程落地、数据复盘与竞品体验分析。",
+      "must_have_skills": [
+        "对AI产品有浓厚兴趣",
+        "基础逻辑梳理与文字表达",
+        "沟通协作"
+      ],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "牛客页面可直接打开并显示完整JD；投递窗口明确。"
+    },
+    "腾讯__2027校园招聘-产品类（含ai产品经理）__1786641803760": {
+      "title": "2027校园招聘-产品类（含AI产品经理）",
+      "company": "腾讯",
+      "url": "https://www.pingwest.com/w/316352",
+      "official_url": "https://join.qq.com",
+      "source": "腾讯校招官方启动公告（品玩转载）",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "AI Product",
+      "priority": "P0",
+      "workflow_status": "pending_review",
+      "deadline": "",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P0",
+      "strengths": [
+        "8月11日官方启动2027校招，产品类为五大类别之一",
+        "新增AI原生岗位含AI产品经理，匹配AI产品方向",
+        "面向2026.1-2027.12毕业，2027届硕士在范围内"
+      ],
+      "gaps": [
+        "具体岗位JD需在join.qq.com选择"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "未获取单岗位JD",
+        "深圳/广州岗位名额未公开"
+      ],
+      "responsibilities": "腾讯2027校园招聘产品类岗位，含AI产品经理等AI原生岗位。",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "唯一投递入口join.qq.com；官方提醒警惕收费内推。"
+    },
+    "美团__2027届转正实习-产品经理__1786641803763": {
+      "title": "2027届转正实习-产品经理",
+      "company": "美团",
+      "url": "https://campus.niuqizp.com/job-vrY5ZnLNt.html",
+      "official_url": "https://zhaopin.meituan.com/web/campus",
+      "source": "美团招聘官方公告（牛企直聘转载）",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "internship",
+      "role_family": "Product",
+      "priority": "P1",
+      "workflow_status": "pending_review",
+      "deadline": "",
+      "psychology_trigger": true,
+      "psychology_trigger_type": "accepted",
+      "psychology_evidence": "招聘专业要求列表包含心理学（与计算机、统计学、工业设计、经济学等并列）",
+      "rank_score": null,
+      "rank_verdict": "P1",
+      "strengths": [
+        "2027届转正实习，表现优异可转正",
+        "产品经理为热招岗位，深圳/广州可选",
+        "招聘专业含心理学，专业上可匹配"
+      ],
+      "gaps": [
+        "实习转正性质，需确认具体产品岗位线",
+        "城市名额未公开"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "单岗位JD未获取"
+      ],
+      "responsibilities": "美团2027届转正实习项目产品经理岗位（北京/上海/深圳/成都/广州等）。",
+      "must_have_skills": [
+        "产品思维",
+        "数据分析"
+      ],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "心理学出现在招聘专业列表中，属可接受专业。"
+    },
+    "大疆创新（dji）__2027“拓疆者”校园招聘-软件产品经理__1786641803767": {
+      "title": "2027“拓疆者”校园招聘-软件产品经理",
+      "company": "大疆创新（DJI）",
+      "url": "https://campus.niuqizp.com/job-vyY5zaatM.html",
+      "official_url": "https://we.dji.com/zh-CN/campus",
+      "source": "大疆招聘官方公告（中山大学就业转载）",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "Product",
+      "priority": "P1",
+      "workflow_status": "pending_review",
+      "deadline": "2026-08-25",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P1",
+      "strengths": [
+        "网申2026-06-25至08-25，当前开放",
+        "软件产品类含软件产品经理，工作地深圳",
+        "2027届校招，招满即止"
+      ],
+      "gaps": [
+        "具体岗位JD需到招聘官网查看",
+        "剩余网申窗口有限"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "软件产品经理单岗位JD与专业要求未公开"
+      ],
+      "responsibilities": "DJI 2027“拓疆者”校招软件产品类-软件产品经理（深圳）。",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "每位同学限投一个职位。"
+    },
+    "vivo__2027届全球校园招聘-产品运营类/市场与用户研究__1786641803771": {
+      "title": "2027届全球校园招聘-产品运营类/市场与用户研究",
+      "company": "vivo",
+      "url": "https://campus.niuqizp.com/job-vrs5zMCCz.html",
+      "official_url": "https://hr.vivo.com",
+      "source": "vivo招聘官方公告（微信公众号转载）",
+      "province": "Guangdong",
+      "city": "Dongguan",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "UXR / Insight",
+      "priority": "P1",
+      "workflow_status": "pending_review",
+      "deadline": "2026-09-15",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P1",
+      "strengths": [
+        "网申至9月15日12:00，正在开放",
+        "产品运营类与市场类含市场与用户研究、人因研究方向",
+        "毕业时间2026.8-2027.7，2027届匹配"
+      ],
+      "gaps": [
+        "用户研究方向岗位需官网确认",
+        "东莞为主，深圳岗位需确认"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "单岗位JD未获取"
+      ],
+      "responsibilities": "vivo 2027届全球校招：产品运营类/市场类（含市场与用户研究、人因研究等方向），东莞/深圳等。",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "投递入口hr.vivo.com。"
+    },
+    "京东__2027校园招聘-产品方向__1786641803775": {
+      "title": "2027校园招聘-产品方向",
+      "company": "京东",
+      "url": "https://imgs-b2b.100ec.cn/detail--6662454.html",
+      "official_url": "https://campus.jd.com",
+      "source": "京东2027校招公开报道",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "Product",
+      "priority": "P1",
+      "workflow_status": "pending_review",
+      "deadline": "2026-11-30",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P1",
+      "strengths": [
+        "网申8月3日至11月30日，正式开放",
+        "产品方向岗位，办公城市含广州、深圳",
+        "首次引入AI面试，流程较快"
+      ],
+      "gaps": [
+        "产品方向细分子方向需官网选择"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "单岗位JD未获取"
+      ],
+      "responsibilities": "京东2027校招产品方向（产品经理等），办公城市含广州、深圳。",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "技术产品经理需参加8-12月在线笔试。"
+    },
+    "网易游戏（互娱）__2027届校园招聘-产品类/用户体验类__1786641803779": {
+      "title": "2027届校园招聘-产品类/用户体验类",
+      "company": "网易游戏（互娱）",
+      "url": "https://campus.niuqizp.com/job-vUl5zCM55.html",
+      "official_url": "https://game.campus.163.com",
+      "source": "网易游戏互娱招聘官方公告（转载）",
+      "province": "Guangdong",
+      "city": "Guangzhou",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "Product",
+      "priority": "P1",
+      "workflow_status": "pending_review",
+      "deadline": "",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P1",
+      "strengths": [
+        "7月21日起网申，岗位含产品类、用户体验及设计类",
+        "工作地含广州",
+        "2027届（2026.9-2027.8毕业）"
+      ],
+      "gaps": [
+        "游戏行业，用户体验岗侧重游戏体验研究"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "产品类/游戏体验研究单岗位JD未获取"
+      ],
+      "responsibilities": "网易游戏（互娱）2027届校招：游戏策划、产品类、用户体验及设计类、项目管理类等，广州/杭州/上海。",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "每位同学可投递2个职位。"
+    },
+    "shopee（深圳虾皮）__2027秋季校园招聘-产品经理/策略产品经理__1786641803782": {
+      "title": "2027秋季校园招聘-产品经理/策略产品经理",
+      "company": "Shopee（深圳虾皮）",
+      "url": "https://jy.xmu.edu.cn/campus/view/id/1001830",
+      "official_url": "https://app.mokahr.com/su/nykvgs",
+      "source": "厦门大学就业网公告",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "foreign",
+      "recruitment_type": "campus",
+      "role_family": "Product",
+      "priority": "P1",
+      "workflow_status": "pending_review",
+      "deadline": "2026-11-10",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P1",
+      "strengths": [
+        "产品类岗位：产品经理、策略产品经理、产品设计、数据分析、PJM、TPM",
+        "深圳南山区，2027届",
+        "网申官方链接明确"
+      ],
+      "gaps": [
+        "研发类岗位为列表主体，产品岗需官网选择"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "单岗位JD未获取"
+      ],
+      "responsibilities": "Shopee 2027秋季校招产品类岗位（产品经理、策略产品经理等），深圳。",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "高校就业网公告过期时间2026-11-10。"
+    },
+    "迅雷__2027校园招聘-xpep产品星计划（产品经理）__1786641803786": {
+      "title": "2027校园招聘-XPEP产品星计划（产品经理）",
+      "company": "迅雷",
+      "url": "https://m.yingjiesheng.com/job-008-025-527.html",
+      "official_url": "https://m.yingjiesheng.com/job-008-025-527.html",
+      "source": "应届生求职网（福州大学就业网发布）",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "Management Trainee",
+      "priority": "P1",
+      "workflow_status": "pending_review",
+      "deadline": "2026-10-31",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P1",
+      "strengths": [
+        "XPEP产品星计划为产品经理专项培养项目",
+        "2027届（2026.9-2027.8），深圳/北京/香港",
+        "网申至10月31日"
+      ],
+      "gaps": [
+        "产品星计划培养与考核细节未公开"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "单岗位JD未获取"
+      ],
+      "responsibilities": "迅雷2027校招XPEP产品星计划（产品经理）。",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "同一时间仅可推进1个岗位流程。"
+    },
+    "荣耀终端__2027届秋招-产品设计类/战略管理类__1786641803790": {
+      "title": "2027届秋招-产品设计类/战略管理类",
+      "company": "荣耀终端",
+      "url": "https://m.yingjiesheng.com/xuanjianghui/xjh_6141711",
+      "official_url": "https://www.honor.com/cn/career/",
+      "source": "应届生求职网宣讲会公告",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "Product",
+      "priority": "P1",
+      "workflow_status": "pending_review",
+      "deadline": "",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P1",
+      "strengths": [
+        "不限专业，13大类别含产品设计类、战略管理类",
+        "深圳为工作地之一",
+        "2027届秋招宣讲会已排期"
+      ],
+      "gaps": [
+        "产品设计类具体岗位需官网查看"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "单岗位JD未获取"
+      ],
+      "responsibilities": "荣耀2027届秋招产品设计类/战略管理类岗位（北京/深圳/上海/西安/南京）。",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "AI终端生态公司，产品类不限专业。"
+    },
+    "万兴科技__产品策划实习生（2027届）__1786641803794": {
+      "title": "产品策划实习生（2027届）",
+      "company": "万兴科技",
+      "url": "https://m.yingjiesheng.com/job-007-992-804.html",
+      "official_url": "https://m.yingjiesheng.com/job-007-992-804.html",
+      "source": "应届生求职网（五邑大学就业网发布）",
+      "province": "Guangdong",
+      "city": "Shenzhen",
+      "company_type": "private",
+      "recruitment_type": "internship",
+      "role_family": "Product",
+      "priority": "P2",
+      "workflow_status": "pending_review",
+      "deadline": "",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P2",
+      "strengths": [
+        "2027届、不限专业",
+        "职责含用户需求洞察、竞品分析、PRD与迭代",
+        "CET-6要求与候选人匹配"
+      ],
+      "gaps": [
+        "6月发布、无截止日期，需确认仍开放"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "未确认当前是否仍接受简历"
+      ],
+      "responsibilities": "产品策划实习：市场/竞争/用户分析、需求洞察、产品规划、原型与PRD、上线数据复盘。",
+      "must_have_skills": [
+        "CET-6及以上",
+        "用户场景与动机洞察"
+      ],
+      "nice_to_have_skills": [
+        "创新创业经历",
+        "产品实习经历",
+        "计算机背景"
+      ],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "4K-6K/月，深圳或长沙。"
+    },
+    "广州链股科技__ai产品经理实习（27届）__1786641803797": {
+      "title": "AI产品经理实习（27届）",
+      "company": "广州链股科技",
+      "url": "https://www.yingjiesheng.com/job-007-942-785.html",
+      "official_url": "https://www.yingjiesheng.com/job-007-942-785.html",
+      "source": "应届生求职网",
+      "province": "Guangdong",
+      "city": "Guangzhou",
+      "company_type": "private",
+      "recruitment_type": "internship",
+      "role_family": "AI Product",
+      "priority": "P2",
+      "workflow_status": "pending_review",
+      "deadline": "",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "待核验线索",
+      "strengths": [
+        "27届在校生可投，AI产品方向实习",
+        "广州线下"
+      ],
+      "gaps": [
+        "页面触发反爬校验，JD与开放状态未核到"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "需用户打开应届生求职网原链接核实JD与截止时间"
+      ],
+      "responsibilities": "未知（反爬未获取正文）。",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "必须由用户打开原链接核实后再考虑；不得判定为P0/P1。"
+    },
+    "小米集团__2027届全球校园招聘（产品类方向）__1786641920585": {
+      "title": "2027届全球校园招聘（产品类方向）",
+      "company": "小米集团",
+      "url": "https://career.sysu.edu.cn/campus/view/id/996398",
+      "official_url": "https://hr.xiaomi.com/campus",
+      "source": "高校就业网+企业官方招聘页",
+      "province": "Guangdong",
+      "city": "Shenzhen（多城市可选）",
+      "company_type": "private",
+      "recruitment_type": "campus",
+      "role_family": "Product / AI Product",
+      "priority": "P1",
+      "workflow_status": "pending_review",
+      "deadline": "",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P1",
+      "strengths": [
+        "中山大学就业网发布2027届全球校招启动公告",
+        "校招覆盖产品类方向，深圳等城市可选",
+        "知名互联网/智能硬件大厂2027届应届生项目"
+      ],
+      "gaps": [
+        "具体产品岗位JD与专业要求未获取",
+        "城市与岗位以官网为准"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "未获取单岗位JD",
+        "心理学专业是否可报未知"
+      ],
+      "responsibilities": "小米集团2027届全球校园招聘，覆盖产品等方向（项目级核验）。",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "项目已由中山大学就业网公告核验；投递前需在hr.xiaomi.com/campus确认具体产品岗与城市。"
+    },
+    "zuru__2027届校园招聘（商科/创意/设计/研发/制造）__1786641922837": {
+      "title": "2027届校园招聘（商科/创意/设计/研发/制造）",
+      "company": "ZURU",
+      "url": "https://career.cuhk.edu.cn/en/job/view/id/468977",
+      "official_url": "https://career.cuhk.edu.cn/en/job/view/id/468977",
+      "source": "高校就业网（港中深就业网）+外企校招",
+      "province": "Guangdong",
+      "city": "Guangzhou/Shenzhen/Dongguan",
+      "company_type": "foreign",
+      "recruitment_type": "campus",
+      "role_family": "Management Trainee",
+      "priority": "P2",
+      "workflow_status": "pending_review",
+      "deadline": "2026-09-16",
+      "psychology_trigger": false,
+      "psychology_trigger_type": "none",
+      "psychology_evidence": "",
+      "rank_score": null,
+      "rank_verdict": "P2",
+      "strengths": [
+        "全球前十玩具外企2027届校招，港中深就业网2026-08-11发布",
+        "部分岗位专业不限，含商科类岗位，或含产品/管培方向",
+        "截止2026-09-16，仍在开放期内"
+      ],
+      "gaps": [
+        "岗位方向为商科/创意/设计/研发/制造，非产品/UXR主线",
+        "具体城市与单岗位JD需官网确认"
+      ],
+      "hard_constraints": [],
+      "evidence_gaps": [
+        "未获取单岗位JD",
+        "岗位所在城市未在公告中逐条列出"
+      ],
+      "responsibilities": "ZURU 2027届校园招聘，商科、创意、设计、研发、制造五大类岗位，共20+岗位/170+HC，部分专业不限。",
+      "must_have_skills": [],
+      "nice_to_have_skills": [],
+      "first_seen": "2026-08-13",
+      "status": "new",
+      "notes": "公司在中国设广州/深圳/东莞办公室（据此前核验）；投递前请官网确认目标岗位城市与职责。"
+    }
+  }
+}

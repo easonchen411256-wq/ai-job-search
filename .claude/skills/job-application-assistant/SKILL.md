@@ -17,6 +17,10 @@ framework_version: 1.3.2
 When the user provides a job posting (URL or text), follow this workflow:
 
 ### Step 1: Research & Evaluate Fit
+- For China-mainland postings, read `10-china-mainland-workflow.md` first. Parse
+  location, employer/recruitment type, psychology-major evidence, and hard
+  constraints before giving any score. A `Skip` rule is a hard stop; P0/P1/P2 is
+  triage, not a promise that the candidate is eligible.
 - Fetch the job posting content (use WebFetch for URLs). **A 403 is not a dead end** - follow the escalation order in `09-web-research.md` before concluding a page is unavailable, and prefer the employer's own careers posting over an aggregator listing
 - Keep the **full posting text verbatim** for Step 3b to archive - never a summary
 - Analyze the posting for required competencies, keywords, and priorities
@@ -64,6 +68,7 @@ When the user provides a job posting (URL or text), follow this workflow:
 | `07-interview-prep.md` | STAR examples, tough questions, roleplay guidelines |
 | `08-application-forms.md` | Portal free-text fields: self-introduction, project entries, character-limited pitches |
 | `09-web-research.md` | Fetching postings and company pages: trust boundary, the WebFetch 403 fallback, escalation order, claim verification |
+| `10-china-mainland-workflow.md` | Guangdong/Guangxi dual-channel discovery, JD evidence, hard filters, and Chinese application handoff |
 
 ---
 

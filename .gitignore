@@ -24,8 +24,11 @@ salary_data.json
 # its own directory, so these land at .claude/skills/job-scraper/job_scraper/*.
 # A rooted `job_scraper/...` pattern silently fails to match them.
 **/job_scraper/seen_jobs.json
+**/job_scraper/search_request.json
+**/job_scraper/*.log
 **/job_scraper/notion_sync.json
 **/job_scraper/*.md
+**/job_scraper/follow_up.csv
 *_BehavioralReport.pdf
 linkedin_Profile.pdf
 
